@@ -1623,7 +1623,7 @@ body {
 
 .footer-input-button {
   display: inline-block;
-  width: 120px;
+  min-width: 120px;
   padding: 14px 26px;
   border-radius: 100px;
   background: #fd9222;
@@ -1633,13 +1633,12 @@ body {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
-  line-height: normal;
   transition: background-color 250ms linear;
 }
 
 @media screen and (min-width: 768px) {
   .footer-input-button {
-    width: 128px;
+    min-width: 128px;
     padding: 14px 28px;
   }
 }
@@ -1716,6 +1715,8 @@ body {
 
 /* =================================================== FORM ================================================== */
 
+
+/* !!!!!!!! stopped here */
 .review-form-descr {
   width: 255px;
   font-size: 20px;
