@@ -103,7 +103,7 @@ body {
   }
 }
 
-@media (min-width: 1168px) {
+@media (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
@@ -214,7 +214,8 @@ body {
     line-height: 1.14;
   }
 
-  .mobile-menu-link:focus {
+  .mobile-menu-link:focus,
+  .mobile-menu-link:active {
     color: #fd9222;
   }
 
@@ -309,7 +310,8 @@ body {
   }
 
   .contacts-in-icons-link:hover,
-  .contacts-in-icons-link:focus {
+  .contacts-in-icons-link:focus,
+  .contacts-in-icons-link:active {
     border: 1px solid rgba(253, 146, 34, 0.1);
     fill: #fd9222;
   }
@@ -317,7 +319,7 @@ body {
 
 /* ===================================== HEADER DESKTOP STYLES ==================================== */
 
-@media (min-width: 1168px) {
+@media (min-width: 1200px) {
   .logo {
     font-size: 18px;
     line-height: 1.11;
@@ -387,7 +389,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .hero-section {
     max-width: 1136px;
     padding: 381px 40px 40px 40px;
@@ -492,7 +494,8 @@ body {
 }
 
 .hero-link-how-made:hover,
-.hero-link-how-made:focus {
+.hero-link-how-made:focus,
+.hero-link-how-made:active {
   color: #fd9222;
 }
 
@@ -517,7 +520,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .hero-link-scroll-down {
     color: #fff;
     font-weight: 500;
@@ -604,7 +607,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .benefits-list {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -617,7 +620,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .benefits-item {
     width: calc((100% - 176px) / 3);
   }
@@ -647,7 +650,7 @@ body {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .benefits-item:nth-child(2),
   .benefits-item:nth-child(3) {
     position: relative;
@@ -680,7 +683,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .ingredients-section {
     padding-top: 120px;
     padding-bottom: 60px;
@@ -718,7 +721,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .ingredients-list {
     column-gap: 24px;
   }
@@ -739,7 +742,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .ingredients-item {
     padding: 28px 23px 28px 28px;
     width: calc((100% - 96px) / 4);
@@ -766,7 +769,7 @@ body {
   transition: transform 250ms linear;
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .ingredients-overlay {
     padding: 20px;
     overflow: auto;
@@ -885,7 +888,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .picture-and-steps-container {
     display: flex;
     column-gap: 20px;
@@ -917,7 +920,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .how-made-steps-container {
     width: 516px;
     padding-right: 35px;
@@ -944,7 +947,7 @@ body {
   row-gap: 18px;
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .how-made-instruction {
     row-gap: 24px;
   }
@@ -984,7 +987,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .our-products-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1009,7 +1012,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .our-products-list {
     column-gap: 18px;
     row-gap: 24px;
@@ -1030,7 +1033,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .our-products-item {
     width: calc((100% - 54px) / 4);
     padding-right: 20px;
@@ -1085,7 +1088,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .top-sellers-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1141,7 +1144,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .top-sellers-item {
     width: calc((100% - 32px) / 3);
   }
@@ -1155,8 +1158,6 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 @media screen and (min-width: 768px) {
   .top-sellers-item-title {
@@ -1211,7 +1212,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .loved-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1238,7 +1239,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .loved-list {
     column-gap: 28px;
     margin-bottom: 32px;
@@ -1280,7 +1281,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .loved-item {
     width: calc((100% - 56px) / 3);
     padding: 56px 24px 24px 24px;
@@ -1535,7 +1536,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .footer-bottom-container::before {
     width: 1136px;
   }
@@ -1560,8 +1561,6 @@ body {
     column-gap: 16px;
   }
 }
-
-/* ! При зміні падінгу, змінити відступ від social-media container - перерахувати його, відняти від макетного маржіну, новий падінг лінка, а також перерахувати відступ маржін футер-нав*/
 
 .footer-nav-link {
   display: block;
@@ -1601,13 +1600,12 @@ body {
   }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .footer-email-input {
     min-width: 313px;
   }
 }
 
-.footer-email-input:hover,
 .footer-email-input:focus,
 .footer-email-input:active {
   outline: none;
@@ -1708,14 +1706,13 @@ body {
 }
 
 .modal-close-btn:hover,
+.modal-close-btn:focus,
 .modal-close-btn:focus {
   stroke: #fd9222;
 }
 
 /* =================================================== FORM ================================================== */
 
-
-/* !!!!!!!! stopped here */
 .review-form-descr {
   width: 255px;
   font-size: 20px;
@@ -1759,7 +1756,7 @@ body {
   display: block;
   margin-bottom: 4px;
   color: rgba(64, 64, 64, 0.3);
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
@@ -1794,7 +1791,8 @@ body {
   }
 }
 
-.review-form-field:focus {
+.review-form-field:focus, 
+.review-form-field:active{
   border-color: #fd9222;
 }
 
@@ -1822,7 +1820,8 @@ body {
   }
 }
 
-.review-form-field:focus + .review-form-field-icon {
+.review-form-field:focus + .review-form-field-icon,
+.review-form-field:active + .review-form-field-icon {
   stroke: #fd9222;
 }
 
