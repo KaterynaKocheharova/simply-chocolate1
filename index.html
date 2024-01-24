@@ -157,6 +157,12 @@
               ./img/ingredients/webp/img_1_desktop-2x.webp 2x"
               media="(min-width: 1200px)"
             >
+            <!-- NOT COMPRESSED WEB P -->
+            <!-- <source
+            type="image/webp"
+            src="./img/ingredients/mobile-and-tablet/img_1_tablet-mobile-2x-not-compressed.webp"
+            media="(min-width: 320px)";
+          > -->
               <source srcset="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png 1x,
               ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1@2x.png 2x"
               media="(min-width: 320px)"
@@ -218,8 +224,8 @@
             <picture>
               <source
               type="image/webp"
-              srcset="./img/ingredients/webp/img_3_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_3_desktop-2x.webp 2x"
+              srcset="./img/ingredients/webp/img_3_tablet-mobile-1x.webp 1x,
+              ./img/ingredients/webp/img_3_tablet-mobile-2x.webp 2x"
               media="(min-width: 320px)"
             >
             <source
@@ -253,8 +259,8 @@
             <picture>
               <source
               type="image/webp"
-              srcset="./img/ingredients/webp/img_4_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_4_desktop-2x.webp 2x"
+              srcset="./img/ingredients/webp/img_4_tablet-mobile-1x.webp 1x,
+              ./img/ingredients/webp/img_4_tablet-mobile-2x.webp 2x"
               media="(min-width: 320px)"
             >
             <source
@@ -288,8 +294,8 @@
             <picture>
               <source
               type="image/webp"
-              srcset="./img/ingredients/webp/img_5_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_5_desktop-2x.webp 2x"
+              srcset="./img/ingredients/webp/img_5_tablet-mobile-1x.webp 1x,
+              ./img/ingredients/webp/img_5_tablet-mobile-2x.webp 2x"
               media="(min-width: 320px)"
             >
             <source
@@ -317,8 +323,8 @@
             <picture>
               <source
               type="image/webp"
-              srcset="./img/ingredients/webp/img_6_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_6_desktop-2x.webp 2x"
+              srcset="./img/ingredients/webp/img_6_tablet-mobile-1x.webp 1x,
+              ./img/ingredients/webp/img_6_tablet-mobile-2x.webp 2x"
               media="(min-width: 320px)"
             >
             <source
@@ -346,8 +352,8 @@
             <picture>
               <source
               type="image/webp"
-              srcset="./img/ingredients/webp/img_7_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_7_desktop-2x.webp 2x"
+              srcset="./img/ingredients/webp/img_7_tablet-mobile-1x.webp 1x,
+              ./img/ingredients/webp/img_7_tablet-mobile-2x.webp 2x"
               media="(min-width: 320px)"
             >
             <source
@@ -381,6 +387,24 @@
         <div class="picture-and-steps-container">
           <div class="how-made-picture-container">
           <picture class="how-made-image">
+          <source
+            type="image/webp"
+            srcset="./img/how-made/webp/image_desktop-1x.webp 1x,
+            ./img/how-made/webp/image_desktop-2x.webp 2x"
+            media="(min-width: 1200px)"
+          >
+          <source
+          type="image/webp"
+          srcset="./img/how-made/webp/image_tablet-1x.webp 1x,
+          ./img/how-made/webp/image_tablet-2x.webp 2x"
+          media="(min-width: 768px)"
+        >
+          <source
+          type="image/webp"
+          srcset="./img/how-made/webp/image_mobile-1x.webp 1x,
+          ./img/how-made/webp/image_mobile-2x.webp 2x"
+          media="(min-width: 320px)"
+        >
             <source srcset="./img/how-made/image_desk.jpg 1x,
             ./img/how-made/image_desk@2x.jpg 2x"
             media="(min-width: 1200px)"
@@ -429,84 +453,143 @@
         <h2 class="section-title our-products-title">Our <span class="accent-color">products</span></h2>
         <ul class="our-products-list list">
           <li class="our-products-item">
-            <img srcset="./img/our-products/img-1.jpg 1x, 
-            ./img/our-products/img-1@2x.jpg 2x"
-            src="./img/our-products/img-1.jpg "
-            alt="dark chocolate with orange"
-            width="230"
-            height="201">
+            <picture>
+            <source
+            type="image/webp"
+            srcset="./img/our-products/webp/img_1_1x.webp 1x,
+            ./img/our-products/webp/img_1_2x.webp 2x"
+          >
+              <img srcset="./img/our-products/img-1.jpg 1x, 
+              ./img/our-products/img-1@2x.jpg 2x"
+              src="./img/our-products/img-1.jpg "
+              alt="dark chocolate with orange"
+              width="230"
+              height="201">
+            </picture>
+           
               <h3 class="our-poducts-item-title">Orange</h3>
               <p class="our-products-type-text">Dark chocolate</p>
               <button class="our-products-price-button">45 UAH</button>
             </img>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_2_1x.webp 1x,
+              ./img/our-products/webp/img_2_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-2.jpg 1x, 
             ./img/our-products/img-2@2x.jpg 2x"
             src="./img/our-products/img-2.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
+
               <h3 class="our-poducts-item-title">Apple&Cranberry</h3>
               <p class="our-products-type-text">Milk chocolate</p>
               <button class="our-products-price-button">50 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_3_1x.webp 1x,
+              ./img/our-products/webp/img_3_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-3.jpg 1x, 
             ./img/our-products/img-3@2x.jpg 2x"
             src="./img/our-products/img-3.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
               <h3 class="our-poducts-item-title">Lime&Sea salt</h3>
               <p class="our-products-type-text">Dark chocolate</p>
               <button class="our-products-price-button">66 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_4_1x.webp 1x,
+              ./img/our-products/webp/img_4_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-4.jpg 1x, 
             ./img/our-products/img-4@2x.jpg 2x"
             src="./img/our-products/img-4.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
               <h3 class="our-poducts-item-title">Pineapple</h3>
               <p class="our-products-type-text">Dark chocolate</p>
               <button class="our-products-price-button link">54 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_5_1x.webp 1x,
+              ./img/our-products/webp/img_5_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-5.jpg 1x, 
             ./img/our-products/img-5@2x.jpg 2x"
             src="./img/our-products/img-5.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
               <h3 class="our-poducts-item-title">Classic</h3>
               <p class="our-products-type-text">Milk chocolate</p>
               <button class="our-products-price-button link">45 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_6_1x.webp 1x,
+              ./img/our-products/webp/img_6_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-6.jpg 1x, 
             ./img/our-products/img-6@2x.jpg 2x"
             src="./img/our-products/img-6.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
               <h3 class="our-poducts-item-title">Honey</h3>
               <p class="our-products-type-text">Milk chocolate</p>
               <button class="our-products-price-button">50 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_7_1x.webp 1x,
+              ./img/our-products/webp/img_7_2x.webp 2x"
+            >
             <img srcset="./img/our-products/img-7.jpg 1x, 
             ./img/our-products/img-7@2x.jpg 2x"
             src="./img/our-products/img-7.jpg "
             alt="dark chocolate with orange"
             width="230"
             height="201">
+            </picture>
+
               <h3 class="our-poducts-item-title">Roasted fruits</h3>
               <p class="our-products-type-text">Dark chocolate</p>
               <button class="our-products-price-button">66 UAH</button>
           </li>
           <li class="our-products-item">
+            <picture>
+              <source
+              type="image/webp"
+              srcset="./img/our-products/webp/img_8_1x.webp 1x,
+              ./img/our-products/webp/img_8_2x.webp 2x"
+            >
+            </picture>
             <img srcset="./img/our-products/img-8.jpg 1x, 
             ./img/our-products/img-8@2x.jpg 2x"
             src="./img/our-products/img-8.jpg "
@@ -528,6 +611,23 @@
     <li class="top-sellers-item">
       <div class="container-for-top-sellers-image">
         <picture>
+
+          <!-- NOT OPTIMIZED WEBP IN THIS SECTION -->
+          <!-- <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_1_desktop-1x.webp 1x,
+          ./img/top-sellers/webp/img_1_desktop-2x.webp 2x"
+          media="(min-width: 1200px)">
+          
+          <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_1_tablet-1x.webp 1x,
+          ./img/top-sellers/webp/img_1_tablet-2x.webp 2x"
+          media="(min-width: 768px)">
+          
+          <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_1_mobile-1x.webp 1x,
+          ./img/top-sellers/webp/img_1_mobile-1x.webp 2x"
+          media="(min-width: 320px)"> -->
+          
           <source
           srcset="./img/top-sellers/img-1.jpg 1x,
           ./img/top-sellers/img-1_desk@2x.jpg 2x"
@@ -549,6 +649,20 @@
     <li class="top-sellers-item">
       <div class="container-for-top-sellers-image">
         <picture>
+          <!-- <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_2_desktop-1x.webp 1x,
+          ./img/top-sellers/webp/img_2_desktop-2x.webp 2x"
+          media="(min-width: 1200px)">
+          >
+          <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_2_tablet-1x.webp 1x,
+          ./img/top-sellers/webp/img_2_tablet-2x.webp 2x"
+          media="(min-width: 768px)">
+          >
+          <source type="image/webp"
+          srcset="./img/top-sellers/webp/img_2_desktop-1x.webp 1x,
+          ./img/top-sellers/webp/img_2_desktop-2x.webp 2x"
+          media="(min-width: 1200px)"> -->
           <source
           srcset="./img/top-sellers/img-2.jpg 1x,
           ./img/top-sellers/img-2@2x.jpg 2x"
@@ -565,9 +679,14 @@
     </li>
     <li class="top-sellers-item">
       <div class="container-for-top-sellers-image">
-      <img srcset=
-      "./img/top-sellers/img-3.jpg 1x,
-      ./img/top-sellers/img-3@2x.jpg 2x" alt="dark chocolate">
+          <!-- !!! NO WEBP HERE -->
+          <!-- <source type="img/webp"
+          srcset="./img/top-sellers/webp/img_3_desktop-1x.webp 1x,
+          ./img/top-sellers/webp/img_3_desktop-1x.webp 2x"
+          > -->
+          <img srcset=
+          "./img/top-sellers/img-3.jpg 1x,
+          ./img/top-sellers/img-3@2x.jpg 2x" alt="dark chocolate">
       <p class="top-sellers-text">Dark chocolate is a rich and indulgent treat that is beloved by many chocolate enthusiasts. It is made from cocoa beans, which are roasted, ground, and then processed to produce chocolate liquor. Dark chocolate contains a higher percentage of cocoa solids compared to milk chocolate.</p>
     </div>
       <h3 class="top-sellers-item-title">DARK CHOCOLATE</h3>
@@ -576,20 +695,25 @@
   </div>
 </section>
       <!-- =================================================== CHOCOLATE IS LOVED ========================== -->
-      <!-- !!!ADD SLIDER LATER -->
       <section class="loved-section" id="loved">
         <div class="container">
         <h2 class="section-title loved-section-title" id="loved"><span class="accent-color">chocolate</span> is loved</h2>
         <ul class="loved-list list">
           <li class="loved-item">
             <div class="reviews-image">
-            <img srcset="./img/reviews/reviews-picture.png 1x 
-        ./img/reviews/reviews-picture@2x.png 2x"
-        src="./img/reviews/reviews-picture.png"
-        alt="photo of Victoria Dobrzhanska"
-        width="80"
-        height="80"
-        >
+              <picture>
+                <source type="img/webp"
+                srcset="./img/reviews/webp/ellipse_1x.webp 1x
+                ./img/reviews/webp/ellipse_2x.webp2x">
+                <img srcset="./img/reviews/reviews-picture.png 1x 
+                ./img/reviews/reviews-picture@2x.png 2x"
+                src="./img/reviews/reviews-picture.png"
+                alt="photo of Victoria Dobrzhanska"
+                width="80"
+                height="80"
+                >
+              </picture>
+ 
       </div>
             <h3 class="loved-item-title">Victoria Dobrzhanska</h3>
             <p class="loved-text">
@@ -599,13 +723,19 @@
           </li>
           <li class="loved-item">
             <div class="reviews-image">
-              <img srcset="./img/reviews/reviews-picture-2.png 1x 
-          ./img/reviews/reviews-picture-2@2x.png 2x"
-          src="./img/reviews/reviews-picture-2.png"
-          alt="photo of Nazar Babenko"
-          width="80"
-          height="80"
-          >
+              <picture>
+                <source type="img/webp"
+                srcset="./img/reviews/webp/ellipse3_1x.webp 1x
+                ./img/reviews/webp/ellipse3_2x.webp2x">
+                <img srcset="./img/reviews/reviews-picture-2.png 1x 
+                ./img/reviews/reviews-picture-2@2x.png 2x"
+                src="./img/reviews/reviews-picture-2.png"
+                alt="photo of Nazar Babenko"
+                width="80"
+                height="80"
+                >
+              </picture>
+
         </div>
             <h3 class="loved-item-title">Nazar Babenko</h3>
             <p class="loved-text">
@@ -616,6 +746,11 @@
           </li>
           <li class="loved-item">
             <div class="reviews-image">
+              <picture>
+                <source type="img/webp"
+                srcset="./img/reviews/webp/ellipse2_1x.webp 1x
+                ./img/reviews/webp/ellipse2_2x.webp2x">
+              </picture>
               <img srcset="./img/reviews/reviews-picture-3.png 1x 
           ./img/reviews/reviews-picture-3@2x.png 2x"
           src="./img/reviews/reviews-picture-3.png"
