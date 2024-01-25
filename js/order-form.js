@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ===================================== ЗМІННІ
 
-const reviewForm = document.querySelector(".review-form-backdrop");
-const leaveReviewBtn = document.querySelector(".review-btn");
-const reviewFormCloseBtn = document.querySelector(".modal-close-btn");
+const orderForm = document.querySelector(".order-form-backdrop");
+const buyBtn = document.querySelector(".hero-buy-now-btn");
+const orderFormCloseBtn = document.querySelector(".order-close-btn");
 
   // ================================= ВІДКРИТТЯ
-  leaveReviewBtn.addEventListener('click', function () {
-    reviewForm.classList.add('is-open');
+  buyBtn.addEventListener('click', function () {
+    orderForm.classList.add('is-open');
   });
 
   // ================================= ЗАКРИТТЯ
-  reviewFormCloseBtn.addEventListener('click', function () {
-    reviewForm.classList.remove('is-open');
+  orderFormCloseBtn.addEventListener('click', function () {
+    orderForm.classList.remove('is-open');
   });
 });

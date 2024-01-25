@@ -838,49 +838,49 @@
       </div>
     </footer>
   <!-- ======================================== REVIEW FORM MODAL BOX ========================================-->
-  <div class="backdrop" id="reviewForm">
+  <div class="backdrop review-form-backdrop">
     <div class="modal-box-for-form">
-      <button class="modal-close-btn" id="reviewFormCloseBtn">
+      <button class="modal-close-btn">
         <svg class="close-btn-icon" width="28" height="28" arialabel="close icon">
           <use href="./img/symbol-defs.svg#icon-x-close"></use>
         </svg>
       </button>
-      <p class="review-form-descr">LEAVE A REVIEW ABOUT <span class="accent-color">OUR CHOCOLATE</span></p>
-      <form class="review-form">
-          <div class="review-form-field-wrapper">
-            <label class="review-form-label" for="user-name">Name</label>
-            <div class="review-form-field-icon-container">
-              <input class="review-form-field" id="user-name" name="user-name" type="text" pattern="[a-zA-ZА-Яа-яіІїЇєЄґҐʼ]+" title="Kateryna" required>
-              <svg class="review-form-field-icon" aria-label="user icon">
+      <p class="form-descr">LEAVE A REVIEW ABOUT <span class="accent-color">OUR CHOCOLATE</span></p>
+      <form class="form-biggest-warpper">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-name" name="user-name" type="text" pattern="[a-zA-ZА-Яа-яіІїЇєЄґҐʼ]+" title="Kateryna" required>
+              <svg class="form-field-icon" aria-label="user icon">
                 <use href="./img/symbol-defs.svg#icon-user"></use>
               </svg>
             </div>
           </div>
-          <div class="review-form-field-wrapper">
-            <label class="review-form-label" for="user-email">Email</label>
-            <div class="review-form-field-icon-container">
-              <input class="review-form-field" id="user-email" name="user-email" type="email" required>
-              <svg class="review-form-field-icon" aria-label="email icon">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-email" name="user-email" type="email" required>
+              <svg class="form-field-icon" aria-label="email icon">
                 <use href="./img/symbol-defs.svg#icon-mail"></use>
               </svg>
             </div>
           </div>
-          <div class="review-form-field-wrapper">
-            <label class="review-form-label" for="user-tel">Phone number</label>
-            <div class="review-form-field-icon-container">
-              <input class="review-form-field" id="user-tel" name="user-tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" required>
-              <svg class="review-form-field-icon" aria-label="phone icon">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-tel">Phone number</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-tel" name="user-tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" required>
+              <svg class="form-field-icon" aria-label="phone icon">
                 <use href="./img/symbol-defs.svg#icon-phone"></use>
               </svg>              
             </div>
           </div>
-          <div class="review-form-field-wrapper">
-            <label class="review-form-label" for="user-comment">Comment</label>
-            <textarea class="review-form-field review-form-comment" id="user-comment" name="user-comment" type="text" placeholder="Enter text" required></textarea>
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea class="form-field form-comment" id="user-comment" name="user-comment" type="text" placeholder="Enter text" required></textarea>
           </div>
           <div class="checkbox-container">
-            <input class="review-form-checkbox visually-hidden" id="privacy-policy-checkbox" name="privacy-policy-radio" type="checkbox" value="true" required>
-            <label class="review-form-label checkbox-label" for="privacy-policy-checkbox">
+            <input class="form-checkboxvisually-hidden" id="privacy-policy-checkbox" name="privacy-policy-radio" type="checkbox" value="true" required>
+            <label class="form-label checkbox-label" for="privacy-policy-checkbox">
               <span class="checkbox-icon-container">
                 <svg class="checkbox-icon" width="10" height="10" aria-label="checkmark icon">
                   <use href="./img/symbol-defs.svg#icon-checkbox"></use>
@@ -889,10 +889,64 @@
             <span class="privacy-policy-text">I accept the terms and conditions of the <a class="privacy-policy-link" href="">Privacy Policy</a></span>
             </label>
           </div>
-        <button class="review-form-submit-button">Send</button>
+        <button class="form-submit-button">Send</button>
       </form>
     </div>
   </div>
+  <!-- ============================================= ORDER FORM ============================================= -->
+  <div class="backdrop order-form-backdrop">
+    <div class="modal-box-for-form">
+      <button class="modal-close-btn order-close-btn">
+        <svg class="close-btn-icon" width="28" height="28" arialabel="close icon">
+          <use href="./img/symbol-defs.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <form class="form-biggest-warpper">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-name" name="user-name" type="text" pattern="[a-zA-ZА-Яа-яіІїЇєЄґҐʼ]+" title="Kateryna" required>
+              <svg class="form-field-icon" aria-label="user icon">
+                <use href="./img/symbol-defs.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-email" name="user-email" type="email" required>
+              <svg class="form-field-icon" aria-label="email icon">
+                <use href="./img/symbol-defs.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-tel">Phone number</label>
+            <div class="form-field-icon-container">
+              <input class="form-field" id="user-tel" name="user-tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" required>
+              <svg class="form-field-icon" aria-label="phone icon">
+                <use href="./img/symbol-defs.svg#icon-phone"></use>
+              </svg>              
+            </div>
+          </div>
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea class="form-field form-comment" id="user-comment" name="user-comment" type="text" placeholder="Please write your request and explain what you'd like to order" required></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input class="form-checkboxvisually-hidden" id="privacy-policy-checkbox" name="privacy-policy-radio" type="checkbox" value="true" required>
+            <label class="form-label checkbox-label" for="privacy-policy-checkbox">
+              <span class="checkbox-icon-container">
+                <svg class="checkbox-icon" width="10" height="10" aria-label="checkmark icon">
+                  <use href="./img/symbol-defs.svg#icon-checkbox"></use>
+              </svg>
+              </span>
+            <span class="privacy-policy-text">I accept the terms and conditions of the <a class="privacy-policy-link" href="">Privacy Policy</a></span>
+            </label>
+          </div>
+        <button class="form-submit-button">Send</button>
+      </form>
+    </div>
   <!-- ============================================= MOBILE-MENU ============================================ -->
   <div class="mobile-menu-backdrop" id="mobileMenu">
   <div class="mobile-menu">
@@ -928,5 +982,13 @@
 </div>
 <script src="./js/review-form.js"></script>
 <script src="./js/mobile-menu.js"></script>
+<script src="./js/order-form.js"></script>
   </body>
 </html>
+
+
+
+<!-- 1. Змінити класи основної форми
+2. Скопіювати вставити у інше місце
+3. Видалити зайве.
+4. Пофіксити джі-ес -->

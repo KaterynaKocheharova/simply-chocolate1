@@ -1698,7 +1698,7 @@ letter-spacing: -0.28px; */
   background-color: transparent;
 }
 
-/* =========================================== FORM MODAL BOX =========================================== */
+/* =========================================== REVIEW AND ORDER FORMS =========================================== */
 
 .backdrop {
   position: fixed;
@@ -1765,7 +1765,7 @@ letter-spacing: -0.28px; */
 
 /* =================================================== FORM ================================================== */
 
-.review-form-descr {
+.form-descr {
   width: 255px;
   font-size: 20px;
   font-weight: 600;
@@ -1776,7 +1776,7 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-descr {
+  .form-descr {
     width: 298px;
     font-size: 24px;
     line-height: 1.17;
@@ -1794,17 +1794,17 @@ letter-spacing: -0.28px; */
   }
 }
 
-.review-form-field-wrapper {
+.form-field-wrapper {
   margin-bottom: 14px;
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-field-wrapper {
+  .form-field-wrapper {
     margin-bottom: 18px;
   }
 }
 
-.review-form-label {
+.form-label {
   display: block;
   margin-bottom: 4px;
   color: rgba(64, 64, 64, 0.3);
@@ -1812,12 +1812,12 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-label {
+  .form-label {
     margin-bottom: 8px;
   }
 }
 
-.review-form-field {
+.form-field {
   width: 100%;
   height: 46px;
   padding-left: 43px;
@@ -1835,7 +1835,7 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-field {
+  .form-field {
     height: 68px;
     padding-left: 62px;
     border-radius: 13px;
@@ -1843,16 +1843,16 @@ letter-spacing: -0.28px; */
   }
 }
 
-.review-form-field:focus,
-.review-form-field:active {
+.form-field:focus,
+.form-field:active {
   border-color: #fd9222;
 }
 
-.review-form-field-icon-container {
+.form-field-icon-container {
   position: relative;
 }
 
-.review-form-field-icon {
+.form-field-icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -1865,31 +1865,31 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-field-icon {
+  .form-field-icon {
     width: 24px;
     height: 24px;
     left: 24px;
   }
 }
 
-.review-form-field:focus + .review-form-field-icon,
-.review-form-field:active + .review-form-field-icon {
+.form-field:focus + .form-field-icon,
+.form-field:active + .form-field-icon {
   stroke: #fd9222;
 }
 
-.review-form-comment {
+.form-comment {
   min-height: 91px;
   resize: none;
   padding: 14px 18px 60px 18px;
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-comment {
+  .form-comment {
     padding: 22px 24px 93px 24px;
   }
 }
 
-.review-form-comment::placeholder {
+.form-comment::placeholder {
   color: rgba(64, 64, 64, 0.3);
   font-family: Montserrat;
   font-size: 14px;
@@ -1898,7 +1898,7 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-comment::placeholder {
+  .form-comment::placeholder {
     font-size: 18px;
   }
 }
@@ -1960,7 +1960,7 @@ letter-spacing: -0.28px; */
   opacity: 1;
 }
 
-.review-form-submit-button {
+.form-submit-button {
   min-width: 93px;
   height: 41px;
   padding: 12px 28px;
@@ -1974,7 +1974,7 @@ letter-spacing: -0.28px; */
 }
 
 @media screen and (min-width: 768px) {
-  .review-form-submit-button {
+  .form-submit-button {
     min-width: 117px;
     height: 45px;
     padding: 14px 40px;
