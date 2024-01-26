@@ -1775,6 +1775,10 @@ letter-spacing: -0.28px; */
   margin-bottom: 32px;
 }
 
+.order-form-descr {
+  font-size: 14px;
+}
+
 @media screen and (min-width: 768px) {
   .form-descr {
     width: 298px;
@@ -1952,11 +1956,11 @@ letter-spacing: -0.28px; */
   transition: opacity 250ms linear;
 }
 
-.review-form-checkbox:checked + .checkbox-label > .checkbox-icon-container {
+.form-checkbox:checked + .checkbox-label > .checkbox-icon-container {
   background-color: #fd9222;
 }
 
-.review-form-checkbox:checked + .checkbox-label .checkbox-icon {
+.form-checkbox:checked + .checkbox-label .checkbox-icon {
   opacity: 1;
 }
 
