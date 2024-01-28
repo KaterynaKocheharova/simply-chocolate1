@@ -132,6 +132,10 @@ body {
 }
 
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 14px;
 }

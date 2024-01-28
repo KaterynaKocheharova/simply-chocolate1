@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ================================= ВІДКРИТТЯ
   mobileMenuBurger.addEventListener('click', function () {
     mobileMenu.classList.add('is-open');
+    alert("Burger clicked")
   });
 
   // ================================= ЗАКРИТТЯ
