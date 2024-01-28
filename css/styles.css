@@ -145,6 +145,12 @@ body {
   line-height: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu-burger {
+    display: none;
+  }
+}
+
 .mobile-menu-burger-icon {
   stroke: #111111;
 }
@@ -178,6 +184,12 @@ body {
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity, visibility;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-backdrop {
+    display: none;
+  }
 }
 
 .mobile-menu-backdrop.is-open {
@@ -259,32 +271,44 @@ body {
     display: none;
   }
 }
-/* ============================================= HEADER TABLET STYLES ===================================== */
+/* ======================================= HEADER TABLET AND DESKTOP STYLES =============================== */
 
 @media screen and (min-width: 768px) {
-  .mobile-menu-burger {
-    display: none;
-  }
-
-  .mobile-menu-backdrop {
-    display: none;
-  }
-
   .main-nav {
     display: flex;
     align-items: baseline;
   }
+}
 
+@media (min-width: 1200px) {
+  .main-nav {
+    width: 898px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .logo {
     margin-right: 47px;
   }
+}
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 18px;
+    line-height: 1.11;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .menu {
     display: flex;
     align-items: center;
     column-gap: 20px;
   }
+}
 
+@media screen and (min-width: 768px) {
   .menu-link {
     display: block;
     font-size: 14px;
@@ -295,18 +319,21 @@ body {
     font-weight: 500;
     line-height: 1.14;
   }
-
+}
+@media screen and (min-width: 768px) {
   .contacts-in-icons-list {
     display: flex;
     align-items: center;
     gap: 14px;
   }
-
+}
+@media screen and (min-width: 768px) {
   .contacts-in-icons-item {
     width: 40px;
     height: 40px;
   }
-
+}
+@media screen and (min-width: 768px) {
   .contacts-in-icons-link {
     display: flex;
     align-items: center;
@@ -319,26 +346,13 @@ body {
     fill: #111111;
     transition: fill 250ms linear, border 250ms linear;
   }
-
+}
+@media screen and (min-width: 768px) {
   .contacts-in-icons-link:hover,
   .contacts-in-icons-link:focus,
   .contacts-in-icons-link:active {
     border: 1px solid rgba(253, 146, 34, 0.1);
     fill: #fd9222;
-  }
-}
-
-/* ===================================== HEADER DESKTOP STYLES ==================================== */
-
-@media (min-width: 1200px) {
-  .logo {
-    font-size: 18px;
-    line-height: 1.11;
-    margin-right: auto;
-  }
-
-  .main-nav {
-    width: 898px;
   }
 }
 
@@ -1421,15 +1435,15 @@ body {
   font-weight: 500;
   line-height: 1.17;
 }
-  .footer-main-text {
-    margin-bottom: 32px;
-  }
+.footer-main-text {
+  margin-bottom: 32px;
+}
 
-  @media screen and (min-width: 768px) {
-    .footer-main-text {
-      margin-bottom: unset;
-    }
+@media screen and (min-width: 768px) {
+  .footer-main-text {
+    margin-bottom: unset;
   }
+}
 
 @media screen and (min-width: 768px) {
   .footer-main-text {
@@ -1446,15 +1460,15 @@ body {
   font-weight: 500;
 }
 
-  .contacts-list {
-    margin-bottom: 18px;
-  }
+.contacts-list {
+  margin-bottom: 18px;
+}
 
-  @media screen and (min-width: 768px) {
-    .contacts-list {
-      margin-bottom: unset;
-    }
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    margin-bottom: unset;
   }
+}
 
 .contacts-list-link {
   display: block;
@@ -1492,26 +1506,25 @@ body {
   column-gap: 14px;
 }
 
+.social-networks-list {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
   .social-networks-list {
-    position: relative;
+    position: unset;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .social-networks-list {
-      position: unset;
-    }
-  }
+.social-networks-container {
+  margin-bottom: 55px;
+}
 
+@media screen and (min-width: 768px) {
   .social-networks-container {
-    margin-bottom: 55px;
+    margin-bottom: unset;
   }
-
-  @media screen and (min-width: 768px) {
-    .social-networks-container {
-      margin-bottom: unset;
-    }
-  }
-
+}
 
 .social-networks-item {
   width: 40px;
@@ -1542,23 +1555,22 @@ body {
 
 /* =========================================== LINE PSEUDOELEMENT ====================================== */
 
+.social-networks-list::after {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (min-width: 768px) {
   .social-networks-list::after {
-    position: absolute;
-    top: 72px;
-    left: 0;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    display: none;
   }
-
-  @media screen and (min-width: 768px) {
-    .social-networks-list::after {
-      display: none;
-    }
-  }
-
+}
 
 @media screen and (min-width: 768px) {
   .footer-bottom-container {
@@ -1585,16 +1597,15 @@ body {
 
 /* ========================================== !!!!!OTHER STYLES ============================================ */
 
+.footer-nav {
+  margin-bottom: 23px;
+}
 
-  .footer-nav {
-    margin-bottom: 23px;
-  }
-
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer-nav {
     margin-bottom: unset;
   }
-  }
+}
 
 .footer-nav-list {
   display: flex;
@@ -1662,7 +1673,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
   line-height: normal;
   letter-spacing: -0.02em;
-/* font-family: Montserrat;
+  /* font-family: Montserrat;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
