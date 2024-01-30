@@ -392,8 +392,8 @@ body {
   margin-bottom: 80px;
   background-color: rgba(17, 17, 17, 0.4);
   background-image: linear-gradient(
-      rgba(17, 17, 17, 0.1),
-      rgba(17, 17, 17, 0.1)
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
     ),
     url(../img/hero/hero-bg_mob@1x.jpg);
   background-repeat: no-repeat;
@@ -406,8 +406,8 @@ body {
   screen and (min-device-pixel-ratio: 2) {
   .hero-section {
     background-image: linear-gradient(
-        rgba(17, 17, 17, 0.1),
-        rgba(17, 17, 17, 0.1)
+        rgba(17, 17, 17, 0.4),
+        rgba(17, 17, 17, 0.4)
       ),
       url(../img/hero/hero-bg_mob@2x.jpg);
   }
@@ -420,8 +420,8 @@ body {
     margin-bottom: 40px;
     background-color: rgba(17, 17, 17, 0.4);
     background-image: linear-gradient(
-        rgba(17, 17, 17, 0.1),
-        rgba(17, 17, 17, 0.1)
+        rgba(17, 17, 17, 0.4),
+        rgba(17, 17, 17, 0.4)
       ),
       url(../img/hero/hero-bg_tab.jpg);
   }
@@ -431,8 +431,8 @@ body {
     screen and (min-device-pixel-ratio: 2) {
     .hero-section {
       background-image: linear-gradient(
-          rgba(17, 17, 17, 0.1),
-          rgba(17, 17, 17, 0.1)
+          rgba(17, 17, 17, 0.4),
+          rgba(17, 17, 17, 0.4)
         ),
         url(../img/hero/hero-bg_tab@2x.jpg);
     }
@@ -498,7 +498,7 @@ body {
   }
 }
 
-.hero-buy-now-btn {
+.hero-buy-now-link {
   display: inline-block;
   min-width: 120px;
   padding: 12px 28px;
@@ -514,15 +514,15 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-buy-now-btn {
+  .hero-buy-now-link {
     padding: 14px 40px;
     min-width: 144px;
   }
 }
 
-.hero-buy-now-btn:hover,
-.hero-buy-now-btn:focus,
-.hero-buy-now-btn:active {
+.hero-buy-now-link:hover,
+.hero-buy-now-link:focus,
+.hero-buy-now-link:active {
   background-color: #fcf1e0;
   color: #fd9222;
 }
@@ -632,7 +632,7 @@ body {
 
 .benefits-section {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   background-color: #1e1823;
 }
 

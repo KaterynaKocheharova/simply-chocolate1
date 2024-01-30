@@ -7,7 +7,7 @@
 // // ===================================== ЗМІННІ
 
 // const orderForm = document.querySelector(".order-form-backdrop");
-// const buyBtn = document.querySelector(".hero-buy-now-btn");
+// const buyBtn = document.querySelector(".hero-buy-now-link");
 // const orderFormCloseBtn = document.querySelector(".order-close-btn");
 
 //   // ================================= ВІДКРИТТЯ
