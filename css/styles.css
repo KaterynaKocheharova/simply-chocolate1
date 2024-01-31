@@ -101,7 +101,7 @@ body {
 
 /* ============================================= CONTAINER ========================================== */
 
-.container {
+ .container {
   max-width: 375px;
   padding-right: 20px;
   padding-left: 20px;
@@ -121,7 +121,7 @@ body {
   .container {
     max-width: 1200px;
   }
-}
+} 
 
 /* .container {
   width: 100%;
