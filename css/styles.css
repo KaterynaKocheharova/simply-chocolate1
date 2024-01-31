@@ -741,6 +741,10 @@ body {
   }
 }
 
+.ingredients-section-title {
+  margin-bottom: 25px;
+}
+
 .ingredients-text {
   width: 335px;
   text-align: center;
