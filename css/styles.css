@@ -53,13 +53,11 @@ body {
   }
 }
 
-
 @media screen and (min-width: 768px) {
   body {
     padding-top: 80px;
   }
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -101,7 +99,7 @@ body {
 
 /* ============================================= CONTAINER ========================================== */
 
- .container {
+.container {
   max-width: 375px;
   padding-right: 20px;
   padding-left: 20px;
@@ -121,7 +119,7 @@ body {
   .container {
     max-width: 1200px;
   }
-} 
+}
 
 /* .container {
   width: 100%;
@@ -805,10 +803,16 @@ body {
 }
 
 .ingredients-item-title {
-  margin-top: 16px;
+  margin-top: 25px;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .ingredients-item-title {
+    margin-top: 36px;
+  }
 }
 
 .ingredients-overlay {
@@ -822,6 +826,15 @@ body {
   border-radius: 15px;
   background-color: #fff;
   transition: transform 250ms linear;
+}
+
+.ingredients-overlay::-webkit-scrollbar {
+  width: 0 !important; /* For Chrome, Safari, and Edge */
+}
+
+.ingredients-overlay {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
 }
 
 @media screen and (min-width: 1200px) {
