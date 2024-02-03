@@ -935,7 +935,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1167px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .made-container {
     padding-left: 77px;
     padding-right: 77px;
@@ -950,6 +950,10 @@ body {
   border-radius: 15px;
 }
 
+.how-made-picture-container {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .made-title {
     margin-bottom: 50px;
@@ -961,12 +965,6 @@ body {
     display: flex;
     column-gap: 20px;
     align-items: center;
-  }
-}
-
-@media screen and (max-width: 1999px) {
-  .how-made-picture-container {
-    margin-bottom: 20px;
   }
 }
 
@@ -984,8 +982,13 @@ body {
 
 @media screen and (min-width: 1200px) {
   .how-made-steps-container {
-    width: 516px;
+    width: calc((100% - 20px) / 2);
     padding-right: 35px;
+  }
+
+  .how-made-picture-container {
+    width: calc((100% - 20px) / 2);
+    margin-bottom: unset;
   }
 }
 
@@ -1302,11 +1305,14 @@ body {
 
 .loved-list {
   display: flex;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .loved-list {
+    justify-content: space-between;
     column-gap: 16px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1751,10 +1757,10 @@ letter-spacing: -0.28px; */
   background-color: transparent;
 }
 
-/* =========================================== REVIEW AND ORDER FORMS =========================================== */
+/* =========================================== REVIEW FORM =========================================== */
 
 .backdrop {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
