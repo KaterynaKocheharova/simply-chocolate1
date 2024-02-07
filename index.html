@@ -145,33 +145,29 @@
         <ul class="ingredients-list list">
           <li class="ingredients-item">
             <picture class="ingredients-image">
-              <source
-              type="image/webp"
-              srcset="./img/ingredients/webp/img_1_tablet-mobile-1x.webp 1x,
-              ./img/ingredients/webp/img_1_tablet-mobile-2x.webp 2x"
-              media="(min-width: 320px)"
-            >
-            <source
-              type="image/webp"
-              srcset="./img/ingredients/webp/img_1_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_1_desktop-2x.webp 2x"
-              media="(min-width: 1200px)"
-            >
-            <!-- NOT COMPRESSED WEB P -->
-            <!-- <source
-            type="image/webp"
-            src="./img/ingredients/mobile-and-tablet/img_1_tablet-mobile-2x-not-compressed.webp"
-            media="(min-width: 320px)";
-          > -->
-              <source srcset="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png 1x,
-              ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1@2x.png 2x"
-              media="(min-width: 320px)"
-              >
-              <source srcset="./img/ingredients/desktop/img-1.png 1x,
-              ./img/ingredients/desktop/img-1@2x.png 2x"
-              media="(min-width: 1200px)">
-              <img src="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png" alt="a bar of milk chocolate">
-            </picture>
+              <!-- WebP format for desktop -->
+              <source type="image/webp" media="(min-width: 1200px)" srcset="
+                ./img/ingredients/webp/img_1_desktop-1x.webp 1x,
+                ./img/ingredients/webp/img_1_desktop-2x.webp 2x
+              ">
+              <!-- Fallback for non-WebP supporting browsers on desktop -->
+              <source media="(min-width: 1200px)" srcset="
+                ./img/ingredients/desktop/img-1.png 1x,
+                ./img/ingredients/desktop/img-1@2x.png 2x
+              ">
+              <!-- WebP format for tablets and mobile -->
+              <source type="image/webp" media="(min-width: 320px)" srcset="
+                ./img/ingredients/webp/img_1_tablet-mobile-1x.webp 1x,
+                ./img/ingredients/webp/img_1_tablet-mobile-2x.webp 2x
+              ">
+              <!-- Fallback for non-WebP supporting browsers on tablets and mobile -->
+              <source media="(min-width: 320px)" srcset="
+                ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png 1x,
+                ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1@2x.png 2x
+              ">
+              <!-- Fallback image for all browsers -->
+              <img src="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png" alt="A bar of milk chocolate">
+            </picture>            
             <h3 class="ingredients-item-title title-white">mILK CHOCOLATE</h3>
             <div class="ingredients-overlay">
               <h3 class="ingredients-overlay-title">Milk chocolate</h3>
@@ -212,27 +208,42 @@
           </li>
           <li class="ingredients-item">
             <picture>
+              <!-- WebP format for desktop -->
               <source
-              type="image/webp"
-              srcset="./img/ingredients/webp/img_3_desktop-1x.webp 1x,
-              ./img/ingredients/webp/img_3_desktop-2x.webp 2x"
-              media="(min-width: 1200px)"
-            >
-            <source srcset="./img/ingredients/desktop/img-3.png 1x,
-            ./img/ingredients/desktop/img-3@2x.png 2x"
-            media="(min-width: 1200px)">
-            <img src="./img/ingredients/mobile-and-tablet/img-3-mobile-tablet.png" alt="four nuts">
+                type="image/webp"
+                media="(min-width: 1200px)"
+                srcset="
+                  ./img/ingredients/webp/img_3_desktop-1x.webp 1x,
+                  ./img/ingredients/webp/img_3_desktop-2x.webp 2x"
+              >
+              <!-- Fallback image for desktop -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  ./img/ingredients/desktop/img-3.png 1x,
+                  ./img/ingredients/desktop/img-3@2x.png 2x"
+              >
+              <!-- WebP format for tablets and mobile -->
+              <source
+                type="image/webp"
+                media="(min-width: 320px)"
+                srcset="
+                  ./img/ingredients/webp/img_3-tablet-mobile_1x.webp 1x,
+                  ./img/ingredients/webp/img_3_tablet-mobile-2x.webp 2x"
+              >
+              <!-- Fallback image for tablets and mobile -->
+              <source
+                srcset="
+                  ./img/ingredients/mobile-and-tablet/img-3-mobile-tablet.png 1x,
+                  ./img/ingredients/mobile-and-tablet/img-3-mobile-tablet@2x.png 2x"
+                media="(min-width: 320px)"
+              >
+              <!-- Fallback image -->
+              <img
+                src="./img/ingredients/mobile-and-tablet/img-3-mobile-tablet.png"
+                alt="Four nuts"
+              >
             </picture>
-            <source srcset="./img/ingredients/mobile-and-tablet/img-3-mobile-tablet.png 1x,
-            ./img/ingredients/mobile-and-tablet/img-3-mobile-tablet@2x.png 2x"
-            media="(min-width: 768px)"
-            >
-              <source
-              type="image/webp"
-              srcset="./img/ingredients/webp/img_3_tablet-mobile-1x.webp 1x,
-              ./img/ingredients/webp/img_3_tablet-mobile-2x.webp 2x"
-              media="(min-width: 320px)"
-            >
             <div class="ingredients-overlay">
               <h3 class="ingredients-overlay-title">Nuts</h3>
               <a href="" class="ingredients-overlay-link link">nuts</a><a href="" class="ingredients-overlay-link ingredients-overlay-link-white link">the benefits</a>
