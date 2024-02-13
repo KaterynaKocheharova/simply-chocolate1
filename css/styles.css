@@ -136,7 +136,7 @@ body {
   }
 } */
 
-/* ============================================= HEADER MOBILE STYLES ======================================= */
+/* ============================================= HEADER STYLES ======================================= */
 
 .menu,
 .contacts-in-icons-list {
@@ -391,8 +391,11 @@ body {
   margin-bottom: 80px;
   background-color: rgba(17, 17, 17, 0.4);
   /* Mobile background image */
-  background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
-                    url(../img/hero/hero-bg_mob@1x.jpg);
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url(../img/hero/hero-bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -404,8 +407,11 @@ body {
   screen and (min-device-pixel-ratio: 2) {
   .hero-section {
     /* High-resolution background image for mobile */
-    background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
-                      url(../img/hero/hero-bg_mob@2x.jpg);
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0.4),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero/hero-bg_mob@2x.jpg);
   }
 }
 
@@ -417,8 +423,11 @@ body {
     margin-bottom: 40px;
     background-color: rgba(17, 17, 17, 0.4);
     /* Tablet background image */
-    background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
-                      url(../img/hero/hero-bg_tab.jpg);
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0.4),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero/hero-bg_tab.jpg);
   }
 
   /* High-resolution images for tablet */
@@ -427,8 +436,11 @@ body {
     screen and (min-device-pixel-ratio: 2) {
     .hero-section {
       /* High-resolution background image for tablet */
-      background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
-                        url(../img/hero/hero-bg_tab@2x.jpg);
+      background-image: linear-gradient(
+          rgba(17, 17, 17, 0.4),
+          rgba(17, 17, 17, 0.4)
+        ),
+        url(../img/hero/hero-bg_tab@2x.jpg);
     }
   }
 }
@@ -441,8 +453,11 @@ body {
     margin-bottom: 80px;
     background-color: rgba(17, 17, 17, 0.1);
     /* Desktop background image */
-    background-image: linear-gradient(rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)),
-                      url(../img/hero/hero-bg.jpg);
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0.1),
+        rgba(17, 17, 17, 0.1)
+      ),
+      url(../img/hero/hero-bg.jpg);
   }
 
   /* High-resolution images for desktop */
@@ -451,8 +466,11 @@ body {
     screen and (min-device-pixel-ratio: 2) {
     .hero-section {
       /* High-resolution background image for desktop */
-      background-image: linear-gradient(rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)),
-                        url(../img/hero/hero-bg_desk@2x.jpg);
+      background-image: linear-gradient(
+          rgba(17, 17, 17, 0.1),
+          rgba(17, 17, 17, 0.1)
+        ),
+        url(../img/hero/hero-bg_desk@2x.jpg);
     }
   }
 }
@@ -1686,7 +1704,7 @@ body {
   display: block;
   min-width: 207px;
   padding: 14px 18px;
-  color: #FFF;
+  color: #fff;
   background-color: transparent;
   border-radius: 30px;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
