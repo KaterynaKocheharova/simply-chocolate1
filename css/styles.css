@@ -159,13 +159,17 @@ body {
   }
 }
 
-.mobile-menu-burger {
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  line-height: 0;
+/* !!!!!!!!!!!!!!!!!!!!! ПРОБЛЕМА МАКС ВІДС - СТИЛІ НЕ ПРАЦЮЮТЬ ДО 767 ВКЛЮЧНО ХОЧА МАЮТЬ  */
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-burger {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    line-height: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
