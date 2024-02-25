@@ -2,7 +2,7 @@
 
 // =================== ВІДКРИТТЯ ТА ЗАКРИТТЯ ФОРМИ, ДОДАВАННЯ ТА ЗАБИРАННЯ КЛАСУ ІЗ-ОУПН ======================
 
-document.addEventListener('DOMContentLoaded', function () {
+
 
 // ===================================== ЗМІННІ
 
@@ -19,4 +19,4 @@ const reviewFormCloseBtn = document.querySelector(".modal-close-btn");
   reviewFormCloseBtn.addEventListener('click', function () {
     reviewForm.classList.remove('is-open');
   });
-});
+
