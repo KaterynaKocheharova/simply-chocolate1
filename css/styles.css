@@ -1127,7 +1127,7 @@ body {
 }
 
 .our-products-price-button {
-  display: block;
+  display: inline-block;
   padding: 8px 20px;
   margin-right: auto;
   margin-left: auto;
@@ -1526,16 +1526,6 @@ body {
   transition: color 250ms linear;
 }
 
-.footer-contacts-top-link {
-  padding-top: 14px;
-  padding-bottom: 2px;
-}
-
-.footer-contacts-bottom-link {
-  padding-top: 2px;
-  padding-bottom: 16px;
-}
-
 .contacts-list-link:hover,
 .contacts-list-link:focus,
 .contacts-list-link:active {
@@ -1670,8 +1660,6 @@ body {
 
 .footer-nav-link {
   display: block;
-  padding-top: 9px;
-  padding-bottom: 9px;
   color: #fff;
   font-weight: 500;
   line-height: 1.14;
