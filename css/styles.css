@@ -1507,6 +1507,7 @@ body {
   color: #fff;
   text-align: left;
   font-weight: 500;
+  margin-bottom: 14px;
 }
 
 .contacts-list {
@@ -1517,6 +1518,10 @@ body {
   .contacts-list {
     margin-bottom: unset;
   }
+}
+
+.contacts-list-item:first-child {
+  margin-bottom: 4px;
 }
 
 .contacts-list-link {
@@ -1594,43 +1599,22 @@ body {
 
 /* =========================================== LINE PSEUDOELEMENT ====================================== */
 
-.social-networks-list::after {
-  position: absolute;
-  top: 72px;
-  left: 0;
+.footer-top-container {
+  position: relative;
+}
+
+.footer-top-container::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: -32.5px;
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (min-width: 768px) {
-  .social-networks-list::after {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer-bottom-container {
-    position: relative;
-  }
-
-  .footer-bottom-container::before {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-bottom-container::before {
-    width: 100%;
+  .footer-top-container::after {
+    bottom: -50.5px;
   }
 }
 
@@ -1655,6 +1639,18 @@ body {
   .footer-nav-list {
     flex-direction: row;
     column-gap: 16px;
+  }
+}
+
+.footer-nav-item:first-child,
+.footer-nav-item:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-nav-item:first-child,
+  .footer-nav-item:nth-child(2) {
+    margin-bottom: unset;
   }
 }
 
