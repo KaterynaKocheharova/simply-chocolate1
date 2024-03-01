@@ -115,9 +115,10 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1136px) {
   .container {
-    max-width: 1200px;
+    /* max-width: 1136px; */
+    max-width: 1136px;
   }
 }
 
@@ -292,7 +293,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1136px) {
   .main-nav {
     width: 898px;
   }
@@ -304,7 +305,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .logo {
     font-size: 18px;
     line-height: 1.11;
@@ -435,7 +436,7 @@ body {
 }
 
 /* Desktop styles */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .hero-section {
     max-width: 1136px;
     padding: 381px 40px 40px 40px;
@@ -570,7 +571,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .hero-link-scroll-down {
     color: #fff;
     font-weight: 500;
@@ -629,6 +630,13 @@ body {
 
 /* ==================================================== BENEFITS ================================================ */
 
+/* !!!!! ЗАПИТАТИ ЗА КОНТЕЙНЕР */
+.benefits-container {
+max-width: 1200px;
+padding-right: 50px;
+padding-left: 50px;
+}
+
 .benefits-section {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -657,7 +665,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .benefits-list {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -670,7 +678,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .benefits-item {
     width: calc((100% - 176px) / 3);
   }
@@ -700,7 +708,7 @@ body {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .benefits-item:nth-child(2),
   .benefits-item:nth-child(3) {
     position: relative;
@@ -733,7 +741,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .ingredients-section {
     padding-top: 120px;
     padding-bottom: 60px;
@@ -775,7 +783,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .ingredients-list {
     column-gap: 24px;
   }
@@ -796,7 +804,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .ingredients-item {
     padding: 28px 23px 28px 28px;
     width: calc((100% - 96px) / 4);
@@ -810,7 +818,7 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .ingredients-item-title {
     margin-top: 36px;
   }
@@ -838,7 +846,7 @@ body {
   scrollbar-width: none; /* For Firefox */
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .ingredients-overlay {
     padding: 20px;
     overflow: auto;
@@ -961,7 +969,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .picture-and-steps-container {
     display: flex;
     column-gap: 20px;
@@ -981,7 +989,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .how-made-steps-container {
     width: calc((100% - 20px) / 2);
     padding-right: 35px;
@@ -1013,7 +1021,7 @@ body {
   row-gap: 18px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .how-made-instruction {
     row-gap: 24px;
   }
@@ -1053,7 +1061,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .our-products-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1078,7 +1086,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .our-products-list {
     column-gap: 18px;
     row-gap: 24px;
@@ -1099,7 +1107,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .our-products-item {
     width: calc((100% - 54px) / 4);
     padding-right: 20px;
@@ -1154,7 +1162,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .top-sellers-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1196,7 +1204,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .top-sellers-item:nth-child(3) {
     display: block;
   }
@@ -1219,7 +1227,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .top-sellers-item {
     width: calc((100% - 32px) / 3);
   }
@@ -1287,7 +1295,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .loved-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1317,7 +1325,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .loved-list {
     column-gap: 28px;
     margin-bottom: 32px;
@@ -1341,7 +1349,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .loved-item:nth-child(3) {
     display: block;
   }
@@ -1364,7 +1372,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .loved-item {
     width: calc((100% - 56px) / 3);
     padding: 56px 24px 24px 24px;
@@ -1691,7 +1699,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1136px) {
   .footer-email-input {
     min-width: 313px;
   }
