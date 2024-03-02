@@ -837,13 +837,17 @@ padding-left: 50px;
   transition: transform 250ms linear;
 }
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! SCROLLBAR */
+/* For Chrome, Safari, and Edge */
 .ingredients-overlay::-webkit-scrollbar {
-  width: 0 !important; /* For Chrome, Safari, and Edge */
+  width: 0 !important; 
 }
 
+/* For Internet Explorer and Edge */
+/* For Firefox */
 .ingredients-overlay {
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 @media screen and (min-width: 1136px) {
@@ -1357,7 +1361,7 @@ padding-left: 50px;
 
 .loved-item {
   position: relative;
-  max-width: 335px;
+  /* max-width: 335px; */
   padding: 56px 18px 42px 18px;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
