@@ -632,9 +632,9 @@ body {
 
 /* !!!!! ЗАПИТАТИ ЗА КОНТЕЙНЕР */
 .benefits-container {
-max-width: 1200px;
-padding-right: 50px;
-padding-left: 50px;
+  max-width: 1200px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .benefits-section {
@@ -840,14 +840,14 @@ padding-left: 50px;
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! SCROLLBAR */
 /* For Chrome, Safari, and Edge */
 .ingredients-overlay::-webkit-scrollbar {
-  width: 0 !important; 
+  width: 0 !important;
 }
 
 /* For Internet Explorer and Edge */
 /* For Firefox */
 .ingredients-overlay {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media screen and (min-width: 1136px) {
@@ -1887,10 +1887,7 @@ letter-spacing: -0.28px; */
   background-color: transparent;
   box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
   outline: 0px solid transparent;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
+  color: rgba(64, 64, 64, 0.3);
   letter-spacing: -0.02em;
   transition: border-color 250ms linear;
 }
@@ -1942,6 +1939,21 @@ letter-spacing: -0.28px; */
   min-height: 91px;
   resize: none;
   padding: 14px 18px 60px 18px;
+}
+
+/* !!!!!!!!!!!! HIDDEN SCROLLBAR FOR FORM TEXAREA */
+
+/* For Chrome, Safari, and Edge  */
+.form-comment::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+/* For Internet Explorer and Edge */
+/* For Firefox */
+
+.form-comment {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media screen and (min-width: 768px) {
