@@ -1,8 +1,8 @@
-document.addEventListener('keydown', hideModal);
+// CLOSING ON ESCAPE
 
 function hideModal(event) {
   if (event.key === 'Escape') {
-    if( mobileMenu.classList.contains('is-open')) {
+    if(mobileMenu.classList.contains('is-open')) {
       mobileMenu.classList.remove('is-open');
       console.log("Modal is closed")
     }
@@ -13,4 +13,7 @@ function hideModal(event) {
     }
   }
 }
+
+
+
 

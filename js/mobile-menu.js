@@ -1,31 +1,31 @@
 'use strict';
 
-// ========= ВІДКРИТТЯ ТА ЗАКРИТТЯ МОЖАЛЬНОГО ВІКНА, ДОДАВАННЯ ТА ЗАБИРАННЯ КЛАСУ ІЗ-ОУПН ==============
-
-document.addEventListener('DOMContentLoaded', function () {
-  // ===================================== ЗМІННІ
+  // ===================================== VARIABLES
   const mobileMenuBurger = document.getElementById('mobileMenuBurger');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
   const mobileMenuMadeLink = document.getElementById('mobile-menu-how-made-link');
   const mobileMenuLovedLink = document.getElementById('mobile-menu-loved-link');
 
-  // ================================= ВІДКРИТТЯ
+  // ==================================== OPENING MODAL
   mobileMenuBurger.addEventListener('click', function () {
     mobileMenu.classList.add('is-open');
+    document.addEventListener('keydown', hideModal);
   });
 
-  // ================================= ЗАКРИТТЯ
+  // ==================================== CLOSING MODAL
   mobileMenuCloseBtn.addEventListener('click', function () {
     mobileMenu.classList.remove('is-open');
+    document.removeEventListener('keydown', hideModal);
   });
 
   mobileMenuMadeLink.addEventListener('click', function () {
     mobileMenu.classList.remove('is-open');
+    document.removeEventListener('keydown', hideModal);
   });
 
   mobileMenuLovedLink.addEventListener('click', function () {
     mobileMenu.classList.remove('is-open');
+    document.removeEventListener('keydown', hideModal);
   });
 
-});

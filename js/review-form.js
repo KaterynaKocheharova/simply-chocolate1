@@ -1,23 +1,21 @@
 'use strict';
 
-// =================== ВІДКРИТТЯ ТА ЗАКРИТТЯ ФОРМИ, ДОДАВАННЯ ТА ЗАБИРАННЯ КЛАСУ ІЗ-ОУПН ======================
-
-
-
-// ===================================== ЗМІННІ
+// ===================================== VARIABLES
 
 const reviewForm = document.querySelector(".review-form-backdrop");
 const leaveReviewBtn = document.querySelector(".review-btn");
 const reviewFormCloseBtn = document.querySelector(".modal-close-btn");
 
-  // ================================= ВІДКРИТТЯ
+  // =================================== OPENING MODAL
   leaveReviewBtn.addEventListener('click', function () {
     reviewForm.classList.add('is-open');
+    document.addEventListener('keydown', hideModal);
   });
 
   // ================================= ЗАКРИТТЯ
   reviewFormCloseBtn.addEventListener('click', function () {
     reviewForm.classList.remove('is-open');
+    document.removeEventListener('keydown', hideModal);
   });
 
 
