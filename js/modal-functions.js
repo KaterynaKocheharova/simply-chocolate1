@@ -1,6 +1,6 @@
 // CLOSING ON ESCAPE
 
-function hideModal(event) {
+function escCloseModal(event) {
   if (event.key === 'Escape') {
     if(mobileMenu.classList.contains('is-open')) {
       mobileMenu.classList.remove('is-open');

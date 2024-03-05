@@ -10,7 +10,7 @@ const mobileMenuList = document.querySelector('.mobile-menu-list');
 
 function openModal() {
   mobileMenu.classList.add('is-open');
-  document.addEventListener('keydown', closeModal);
+  document.addEventListener('keydown', escCloseModal);
   mobileMenuList.addEventListener('click', closeModal);
   mobileMenuCloseBtn.addEventListener('click', closeModal);
 }
@@ -27,7 +27,7 @@ function closeModal() {
 // ================================ REMOVING EVENT LISTENERS
 
 function removeModalEventListenersOnClose() {
-  document.removeEventListener('keydown', closeModal);
+  document.removeEventListener('keydown', escCloseModal);
   mobileMenuList.removeEventListener('click', closeModal);
   mobileMenuCloseBtn.removeEventListener('click', closeModal);
 }
