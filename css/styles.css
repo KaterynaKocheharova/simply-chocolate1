@@ -2053,3 +2053,13 @@ letter-spacing: -0.28px; */
     padding: 14px 40px;
   }
 }
+
+.animation-span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99999999999999999;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
