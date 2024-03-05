@@ -1,31 +1,33 @@
 'use strict';
 
-  // ===================================== VARIABLES
-  const mobileMenuBurger = document.getElementById('mobileMenuBurger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
-  const mobileMenuMadeLink = document.getElementById('mobile-menu-how-made-link');
-  const mobileMenuLovedLink = document.getElementById('mobile-menu-loved-link');
+// ===================================== VARIABLES
+const mobileMenuBurger = document.querySelector('.mobile-menu-burger');
+const mobileMenu = document.querySelector('.mobile-menu-backdrop');
+const mobileMenuCloseBtn = document.querySelector('.mobile-menu-close-button');
+const mobileMenuList = document.querySelector('.mobile-menu-list');
 
-  // ==================================== OPENING MODAL
-  mobileMenuBurger.addEventListener('click', function () {
-    mobileMenu.classList.add('is-open');
-    document.addEventListener('keydown', hideModal);
-  });
+// ==================================== OPENING MODAL
 
-  // ==================================== CLOSING MODAL
-  mobileMenuCloseBtn.addEventListener('click', function () {
-    mobileMenu.classList.remove('is-open');
-    document.removeEventListener('keydown', hideModal);
-  });
+function openModal() {
+  mobileMenu.classList.add('is-open');
+  document.addEventListener('keydown', closeModal);
+  mobileMenuList.addEventListener('click', closeModal);
+  mobileMenuCloseBtn.addEventListener('click', closeModal);
+}
 
-  mobileMenuMadeLink.addEventListener('click', function () {
-    mobileMenu.classList.remove('is-open');
-    document.removeEventListener('keydown', hideModal);
-  });
+mobileMenuBurger.addEventListener('click', openModal);
 
-  mobileMenuLovedLink.addEventListener('click', function () {
-    mobileMenu.classList.remove('is-open');
-    document.removeEventListener('keydown', hideModal);
-  });
+// ==================================== CLOSING MODAL
 
+function closeModal() {
+  mobileMenu.classList.remove('is-open');
+  removeModalEventListenersOnClose();
+}
+
+// ================================ REMOVING EVENT LISTENERS
+
+function removeModalEventListenersOnClose() {
+  document.removeEventListener('keydown', closeModal);
+  mobileMenuList.removeEventListener('click', closeModal);
+  mobileMenuCloseBtn.removeEventListener('click', closeModal);
+}
