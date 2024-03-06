@@ -10,7 +10,7 @@ const mobileMenuList = document.querySelector('.mobile-menu-list');
 
 function openModal() {
   mobileMenu.classList.add('is-open');
-  document.addEventListener('keydown', escCloseModal);
+  document.addEventListener('keydown', (event) => escCloseModal(event, mobileMenu));
   mobileMenuList.addEventListener('click', closeModal);
   mobileMenuCloseBtn.addEventListener('click', closeModal);
 }
@@ -27,7 +27,16 @@ function closeModal() {
 // ================================ REMOVING EVENT LISTENERS
 
 function removeModalEventListenersOnClose() {
-  document.removeEventListener('keydown', escCloseModal);
+  document.removeEventListener('keydown', (event) => escCloseModal(event, mobileMenu));
   mobileMenuList.removeEventListener('click', closeModal);
   mobileMenuCloseBtn.removeEventListener('click', closeModal);
+}
+
+// =============================== CLOSING MODAL ON ESCAPE
+
+function escCloseModal(event, modalElement) {
+  if (event.key === 'Escape' && modalElement.classList.contains('is-open')) {
+    closeModal(modalElement);
+    console.log("Modal is closed");
+  }
 }
