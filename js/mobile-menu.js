@@ -8,14 +8,25 @@ const mobileMenuList = document.querySelector('.mobile-menu-list');
 
 // ==================================== OPENING MODAL
 
-function openModal() {
-  mobileMenu.classList.add('is-open');
-  document.addEventListener('keydown', (event) => escCloseModal(event, mobileMenu));
-  mobileMenuList.addEventListener('click', closeModal);
-  mobileMenuCloseBtn.addEventListener('click', closeModal);
+// function openModal() {
+//   mobileMenu.classList.add('is-open');
+//   document.addEventListener('keydown', (event) => escCloseModal(event, mobileMenu));
+//   mobileMenuList.addEventListener('click', closeModal);
+//   mobileMenuCloseBtn.addEventListener('click', closeModal);
+// }
+
+// mobileMenuBurger.addEventListener('click', openModal);
+
+function openModal(modalElement) {
+  modalElement.classList.add('is-open');
+  // document.addEventListener('keydown', (event) => escCloseModal(event, mobileMenu));
+  // mobileMenuList.addEventListener('click', closeModal);
+  // mobileMenuCloseBtn.addEventListener('click', closeModal);
 }
 
-mobileMenuBurger.addEventListener('click', openModal);
+mobileMenuBurger.addEventListener('click', (event) => openModal(mobileMenu));
+
+
 
 // ==================================== CLOSING MODAL
 
