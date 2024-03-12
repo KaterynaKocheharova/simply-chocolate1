@@ -6,17 +6,9 @@ const reviewForm = document.querySelector(".review-form-backdrop");
 const leaveReviewBtn = document.querySelector(".review-btn");
 const reviewFormCloseBtn = document.querySelector(".modal-close-btn");
 
-  // =================================== OPENING MODAL
-  leaveReviewBtn.addEventListener('click', function () {
-    reviewForm.classList.add('is-open');
-    document.addEventListener('keydown', hideModal);
-  });
+  // =================================== OPENING AND CLOSING MODAL
 
-  // ================================= ЗАКРИТТЯ
-  reviewFormCloseBtn.addEventListener('click', function () {
-    reviewForm.classList.remove('is-open');
-    document.removeEventListener('keydown', hideModal);
-  });
+
 
 
 reviewForm.addEventListener("submit", handleSubmit);
