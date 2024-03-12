@@ -8,11 +8,11 @@ const mobileMenuList = document.querySelector('.mobile-menu-list');
 
 // ==================================== OPENING AND CLOSING MODAL
 
-mobileMenuBurger.addEventListener('click', (event) => toggleModal(mobileMenu));
-mobileMenuCloseBtn.addEventListener('click', (event) => toggleModal(mobileMenu));
-mobileMenuList.addEventListener('click', (event) => toggleModal(mobileMenu));
-document.addEventListener("keydown", (event) => {
-  if (event.code === "Escape" && mobileMenu.classList.contains('is-open')) {
+mobileMenuBurger.addEventListener('click', event => toggleModal(mobileMenu));
+mobileMenuCloseBtn.addEventListener('click', event => toggleModal(mobileMenu));
+mobileMenuList.addEventListener('click', event => toggleModal(mobileMenu));
+document.addEventListener('keydown', event => {
+  if (event.code === 'Escape' && mobileMenu.classList.contains('is-open')) {
     toggleModal(mobileMenu);
   }
 });
@@ -20,10 +20,3 @@ document.addEventListener("keydown", (event) => {
 function toggleModal(modal) {
   modal.classList.toggle('is-open');
 }
-
-
-
-
-
-
-
