@@ -2,29 +2,60 @@
 
 // ===================================== VARIABLES
 
-const reviewForm = document.querySelector(".review-form-backdrop");
-const leaveReviewBtn = document.querySelector(".review-btn");
-const reviewFormCloseBtn = document.querySelector(".modal-close-btn");
+const reviewForm = document.querySelector('.review-form-backdrop');
+const leaveReviewBtn = document.querySelector('.review-btn');
+const reviewFormCloseBtn = document.querySelector('.modal-close-btn');
 
-  // =================================== OPENING AND CLOSING MODAL
+// =================================== OPENING AND CLOSING MODAL
 
+import { toggleModal, closeModalOnEsc } from './modal-helpers.js';
 
+leaveReviewBtn.addEventListener('click', openModal);
 
-
-reviewForm.addEventListener("submit", handleSubmit);
-
-function handleSubmit(event) {
-event.preventDefault();
-const elements = event.target.elements;
-console.log(
-    {
-        name: elements.name.value.trim(),
-        email: elements.email.value.trim(),
-        number: elements.tel.value.trim(),
-        email: elements.comment.value.trim(),
-    }
-)
-event.target.reset();
+function openModal() {
+  toggleModal(reviewForm);
+  reviewFormCloseBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', closeModalOnEscHandler);
 }
 
+function closeModal() {
+  toggleModal(reviewForm);
+  reviewFormCloseBtn.removeEventListener('click', closeModal);
+  document.removeEventListener('keydown', closeModalOnEscHandler);
+}
 
+function closeModalOnEscHandler(event) {
+  closeModalOnEsc(event, reviewForm);
+}
+
+// ================================== FORM HANDLER
+
+// reviewForm.addEventListener("submit", handleSubmit);
+
+// function handleSubmit(event) {
+// event.preventDefault();
+// const elements = event.target.elements;
+// console.log(
+//     {
+//         name: elements.name.value.trim(),
+//         email: elements.email.value.trim(),
+//         number: elements.tel.value.trim(),
+//         email: elements.comment.value.trim(),
+//     }
+// )
+// event.target.reset();
+// }
+
+const reviewFormFileds = {
+  name: "",
+  email: "",
+  phone: "",
+  comment: "",
+  acceptTerms: ""
+
+}
+
+function setInputsValues(form) {
+
+
+}

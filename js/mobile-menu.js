@@ -1,5 +1,7 @@
 'use strict';
 
+import {toggleModal, closeModalOnEsc} from "./modal-helpers.js";
+
 // ===================================== VARIABLES
 const mobileMenuBurger = document.querySelector('.mobile-menu-burger');
 const mobileMenu = document.querySelector('.mobile-menu-backdrop');
@@ -14,22 +16,17 @@ function openModal() {
   toggleModal(mobileMenu);
   mobileMenuCloseBtn.addEventListener('click', closeModal);
   mobileMenuList.addEventListener('click', closeModal);
-  document.addEventListener("keydown", (event) => closeModalOnEsc(event, mobileMenu));
+  document.addEventListener("keydown", closeModalOnEscHandler);
 }
 
 function closeModal() {
   toggleModal(mobileMenu);
   mobileMenuCloseBtn.removeEventListener('click', closeModal);
   mobileMenuList.removeEventListener('click', closeModal);
+  document.removeEventListener("keydown", closeModalOnEscHandler);
 }
 
-function toggleModal(modal) {
-  modal.classList.toggle('is-open');
-}
-
-function closeModalOnEsc(event, modal) {
-if(event.code === "Escape" && modal.classList.contains("is-open")) {
-  modal.classList.toggle("is-open")
-}
-}
+function closeModalOnEscHandler(event) {
+  closeModalOnEsc(event, mobileMenu);
+} 
 

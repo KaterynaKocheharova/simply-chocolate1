@@ -1,5 +1,4 @@
 
-
 // document.addEventListener("DOMContentLoaded", function() {
 //     const logo = document.querySelector(".logo");
 //     const homeLink = document.querySelector(".home-link");
