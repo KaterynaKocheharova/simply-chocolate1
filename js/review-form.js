@@ -46,16 +46,16 @@ function closeModalOnEscHandler(event) {
 // event.target.reset();
 // }
 
-const reviewFormFileds = {
-  name: "",
-  email: "",
-  phone: "",
-  comment: "",
-  acceptTerms: ""
+// const reviewFormFileds = {
+//   name: "",
+//   email: "",
+//   phone: "",
+//   comment: "",
+//   acceptTerms: ""
 
-}
+// }
 
-function setInputsValues(form) {
+// function setInputsValues(form) {
 
 
-}
+// }
