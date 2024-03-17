@@ -2053,12 +2053,31 @@ letter-spacing: -0.28px; */
   }
 }
 
-.animation-span {
-  position: absolute;
+/*  */
+
+.cursor {
+  position: fixed;
+  z-index: 9999999999999999999;
+  width: 50px;
+  height: 50px;
+  left: 0;
   top: 0;
-  bottom: 0;
-  z-index: 99999999999999999;
-  width: 5px;
-  height: 5px;
-  background-color: black;
+  pointer-events: none;
+  border: 1px solid #fd9222;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.cursor2 {
+  position: fixed;
+  z-index: 9999999999999999999;
+  width: 8px;
+  height: 8px;
+  left: 0;
+  top: 0;
+  background-color:  #fff;
+  pointer-events: none;
+  border: 1px solid #fd9222;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
 }
