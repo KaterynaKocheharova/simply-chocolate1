@@ -2066,6 +2066,7 @@ letter-spacing: -0.28px; */
   border: 1px solid #fd9222;
   border-radius: 50px;
   transform: translate(-50%, -50%);
+  transition: .15s;
 }
 
 .cursor2 {
@@ -2081,3 +2082,11 @@ letter-spacing: -0.28px; */
   border-radius: 50px;
   transform: translate(-50%, -50%);
 }
+
+/* .main-header:hover ~ .cursor,
+.footer-section:hover ~ .cursor {
+background-color: black;
+opacity: 0.3;
+transform: scale(1.5) translate(-50%, -50%);
+} */
+
