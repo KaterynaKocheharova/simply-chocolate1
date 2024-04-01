@@ -963,25 +963,28 @@ body {
   }
 }
 
-.picture-and-steps-container {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 20px;
-  align-items: center;
+@media screen and (min-width: 1136px) {
+  .picture-and-steps-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+  }
+  
+  .how-made-img-container {
+    width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .how-made-steps-container {
+    width: 516px;
+    padding: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+  }
 }
 
-.how-made-img-container {
-  width: 600px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.how-made-steps-container {
-  width: 516px;
-  padding: 32px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 15px;
-}
 
 .how-made-subtitle {
   margin-bottom: 20px;
