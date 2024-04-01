@@ -375,7 +375,6 @@ body {
 
 /* Mobile styles */
 .hero-section {
-  max-width: 335px;
   padding: 395px 22px 20px 20px;
   border-radius: 30px;
   margin-right: auto;
@@ -410,7 +409,6 @@ body {
 /* Tablet styles */
 @media screen and (min-width: 768px) {
   .hero-section {
-    max-width: 704px;
     padding: 671px 40px 40px 40px;
     margin-bottom: 40px;
     background-color: rgba(17, 17, 17, 0.4);
@@ -463,6 +461,7 @@ body {
           rgba(17, 17, 17, 0.1)
         ),
         url(../img/hero/hero-bg_desk@2x.jpg);
+        background-size: 1136px 600px;
     }
   }
 }
@@ -950,19 +949,22 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+/* @media screen and (min-width: 768px) and (max-width: 1199px) {
   .made-container {
     padding-left: 77px;
     padding-right: 77px;
   }
-}
+} */
 
 .made-title {
   margin-bottom: 32px;
 }
 
-.how-made-image img {
+.how-made-image {
+  display: block;
   border-radius: 15px;
+  width: 600px;
+  height: 400px;
 }
 
 .how-made-picture-container {
