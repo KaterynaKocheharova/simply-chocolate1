@@ -101,7 +101,6 @@ body {
 
 .container {
   max-width: 375px;
-  width: 90%;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
@@ -374,7 +373,9 @@ body {
 
 /* Mobile styles */
 .hero-section {
-  padding: 395px 22px 20px 20px;
+  max-width: 1136px;
+  padding-top: 395px;
+  padding-bottom: 20px;
   border-radius: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -390,6 +391,7 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 
 /* High-resolution images for mobile */
 @media screen and (min-resolution: 192dpi),
@@ -408,7 +410,8 @@ body {
 /* Tablet styles */
 @media screen and (min-width: 768px) {
   .hero-section {
-    padding: 671px 40px 40px 40px;
+    padding-top: 671px;
+    padding-bottom: 40px;
     margin-bottom: 40px;
     background-color: rgba(17, 17, 17, 0.4);
     /* Tablet background image */
@@ -438,7 +441,8 @@ body {
 @media screen and (min-width: 1136px) {
   .hero-section {
     max-width: 1136px;
-    padding: 381px 40px 40px 40px;
+    padding-top: 381px;
+    padding-bottom:40px;
     margin-bottom: 80px;
     background-color: rgba(17, 17, 17, 0.1);
     /* Desktop background image */
