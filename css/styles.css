@@ -101,6 +101,7 @@ body {
 
 .container {
   max-width: 375px;
+  width: 90%;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
@@ -137,16 +138,19 @@ body {
   background-color: inherit;
 }
 
-@media screen and (max-width: 767px) {
   .main-header {
     padding-top: 20px;
     padding-bottom: 14px;
   }
-}
 
-/* !!!!!!!!!!!!!!!!!!!!! ПРОБЛЕМА МАКС ВІДС - СТИЛІ НЕ ПРАЦЮЮТЬ ДО 767 ВКЛЮЧНО ХОЧА МАЮТЬ  */
+  @media screen and (min-width: 768px) {
+    .main-header {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
-@media screen and (max-width: 767px) {
+
   .mobile-menu-burger {
     width: 28px;
     height: 28px;
@@ -155,7 +159,6 @@ body {
     background-color: transparent;
     line-height: 0;
   }
-}
 
 @media screen and (min-width: 768px) {
   .mobile-menu-burger {
