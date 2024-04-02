@@ -392,7 +392,6 @@ body {
   background-position: center;
 }
 
-
 /* High-resolution images for mobile */
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx),
@@ -442,7 +441,7 @@ body {
   .hero-section {
     max-width: 1136px;
     padding-top: 381px;
-    padding-bottom:40px;
+    padding-bottom: 40px;
     margin-bottom: 80px;
     background-color: rgba(17, 17, 17, 0.1);
     /* Desktop background image */
@@ -974,13 +973,13 @@ body {
     column-gap: 20px;
     align-items: center;
   }
-  
+
   .how-made-img-container {
     width: 600px;
     border-radius: 15px;
     overflow: hidden;
   }
-  
+
   .how-made-steps-container {
     width: 516px;
     padding: 32px;
@@ -988,7 +987,6 @@ body {
     border-radius: 15px;
   }
 }
-
 
 .how-made-subtitle {
   margin-bottom: 20px;
@@ -1765,6 +1763,8 @@ letter-spacing: -0.28px; */
 }
 
 .modal-box-for-form {
+  max-height: 90vh;
+  overflow-y: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1925,27 +1925,24 @@ letter-spacing: -0.28px; */
 .form-comment {
   min-height: 91px;
   resize: none;
-  padding: 14px 18px 60px 18px;
-}
-
-/* !!!!!!!!!!!! HIDDEN SCROLLBAR FOR FORM TEXAREA */
-
-/* For Chrome, Safari, and Edge  */
-.form-comment::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-/* For Internet Explorer and Edge */
-/* For Firefox */
-
-.form-comment {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-left: 18px;
 }
 
 @media screen and (min-width: 768px) {
   .form-comment {
-    padding: 22px 24px 93px 24px;
+    padding-top: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .form-comment {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -2069,6 +2066,39 @@ letter-spacing: -0.28px; */
   border: 1px solid #fd9222;
   border-radius: 50px;
   transform: translate(-50%, -50%);
+}
+
+/* ======================================= FORBID SCROLL ============================================ */
+
+body.forbid-scroll {
+  overflow: hidden;
+}
+/*  */
+
+.os-scrollbar {
+  --os-size: 0;
+  --os-padding-perpendicular: 0;
+  --os-padding-axis: 0;
+  --os-track-border-radius: 0;
+  --os-track-bg: none;
+  --os-track-bg-hover: none;
+  --os-track-bg-active: none;
+  --os-track-border: none;
+  --os-track-border-hover: none;
+  --os-track-border-active: none;
+  --os-handle-border-radius: 0;
+  --os-handle-bg: none;
+  --os-handle-bg-hover: none;
+  --os-handle-bg-active: none;
+  --os-handle-border: none;
+  --os-handle-border-hover: none;
+  --os-handle-border-active: none;
+  --os-handle-min-size: 33px;
+  --os-handle-max-size: none;
+  --os-handle-perpendicular-size: 100%;
+  --os-handle-perpendicular-size-hover: 100%;
+  --os-handle-perpendicular-size-active: 100%;
+  --os-handle-interactive-area-offset: 0;
 }
 
 /* .main-header:hover ~ .cursor,

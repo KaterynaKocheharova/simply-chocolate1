@@ -1,5 +1,6 @@
 'use strict';
 
+import { forbidScroll, allowScroll } from './forbid-scroll.js';
 // ===================================== VARIABLES
 
 const reviewForm = document.querySelector('.review-form-backdrop');
@@ -14,12 +15,14 @@ leaveReviewBtn.addEventListener('click', openModal);
 
 function openModal() {
   toggleModal(reviewForm);
+  forbidScroll();
   reviewFormCloseBtn.addEventListener('click', closeModal);
   document.addEventListener('keydown', closeModalOnEscHandler);
 }
 
 function closeModal() {
   toggleModal(reviewForm);
+  allowScroll();
   reviewFormCloseBtn.removeEventListener('click', closeModal);
   document.removeEventListener('keydown', closeModalOnEscHandler);
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 import {toggleModal, closeModalOnEsc} from "./modal-helpers.js";
+import { forbidScroll, allowScroll } from "./forbid-scroll.js";
 
 // ===================================== VARIABLES
 const mobileMenuBurger = document.querySelector('.mobile-menu-burger');
@@ -14,6 +15,7 @@ mobileMenuBurger.addEventListener('click', openModal);
 
 function openModal() {
   toggleModal(mobileMenu);
+  forbidScroll();
   mobileMenuCloseBtn.addEventListener('click', closeModal);
   mobileMenuList.addEventListener('click', closeModal);
   document.addEventListener("keydown", closeModalOnEscHandler);
@@ -21,6 +23,7 @@ function openModal() {
 
 function closeModal() {
   toggleModal(mobileMenu);
+  allowScroll();
   mobileMenuCloseBtn.removeEventListener('click', closeModal);
   mobileMenuList.removeEventListener('click', closeModal);
   document.removeEventListener("keydown", closeModalOnEscHandler);
