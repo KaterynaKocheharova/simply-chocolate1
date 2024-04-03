@@ -1810,7 +1810,7 @@ letter-spacing: -0.28px; */
 /* =================================================== REVIEW FORM ================================================== */
 
 .form-descr {
-  width: 255px;
+  width: 100%;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
@@ -1825,7 +1825,6 @@ letter-spacing: -0.28px; */
 
 @media screen and (min-width: 768px) {
   .form-descr {
-    width: 298px;
     font-size: 24px;
     line-height: 1.17;
     margin-bottom: 40px;
