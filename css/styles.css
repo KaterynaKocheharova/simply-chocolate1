@@ -373,7 +373,7 @@ body {
 
 /* Mobile styles */
 .hero-section {
-  max-width: 1136px;
+  max-width: 335px;
   padding-top: 395px;
   padding-bottom: 20px;
   border-radius: 30px;
@@ -409,6 +409,7 @@ body {
 /* Tablet styles */
 @media screen and (min-width: 768px) {
   .hero-section {
+    max-width: 704px;
     padding-top: 671px;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -633,7 +634,6 @@ body {
 
 /* ==================================================== BENEFITS ================================================ */
 
-/* !!!!! ЗАПИТАТИ ЗА КОНТЕЙНЕР */
 .benefits-container {
   max-width: 1200px;
   padding-right: 50px;
@@ -840,7 +840,6 @@ body {
   transition: transform 250ms linear;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SCROLLBAR */
 /* For Chrome, Safari, and Edge */
 .ingredients-overlay::-webkit-scrollbar {
   width: 0 !important;
@@ -966,25 +965,59 @@ body {
   }
 }
 
+.picture-and-steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-made-img-container {
+  max-width: 335px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .how-made-img-container {
+    max-width: 614px;
+    margin-bottom: 20px;
+  }
+}
+
+.how-made-steps-container {
+  max-width: 335px;
+  padding: 20px 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .how-made-steps-container {
+    max-width: 614px;
+    padding: 32px;
+  }
+}
+
 @media screen and (min-width: 1136px) {
   .picture-and-steps-container {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    column-gap: 20px;
     align-items: center;
+    column-gap: 20px;
   }
 
-  .how-made-img-container {
-    width: 600px;
-    border-radius: 15px;
-    overflow: hidden;
+  @media screen and (min-width: 1136px) {
+    .how-made-img-container {
+      width: 600px;
+      margin-bottom: unset;
+    }
   }
+
 
   .how-made-steps-container {
     width: 516px;
     padding: 32px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
   }
 }
 
@@ -1124,7 +1157,9 @@ body {
 }
 
 .our-products-price-button {
-  display: inline-block;
+  display: flex;
+  max-width: 100px;
+  justify-content: center;
   padding: 8px 20px;
   margin-right: auto;
   margin-left: auto;

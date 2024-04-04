@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simply Chocolate</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" defer>
+    <link rel="preconnect" href="https://fonts.googleapis.com" defer>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet" defer>
     <link rel="stylesheet" href="./css/styles.css">
 
   </head>
@@ -18,7 +18,7 @@
       <nav class="main-nav">
         <a class="logo link instant-link" href="./index.html">
           <i>SIMPLY</i> CHOCOLATE
-          <svg class="logo-svg" width="24" height="24" aria-label="simply chocolate logo in the form of a little chocolate bar">
+          <svg class="logo-svg" width="24" height="24" aria-label="logo">
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
         </a>
@@ -52,7 +52,7 @@
           </li>
         </ul>
         <button class="mobile-menu-burger">
-          <svg class="mobile-menu-burger-icon" width="28" height="28">
+          <svg class="mobile-menu-burger-icon" width="28" height="28" aria-label="open menu button">
             <use href="./img/sprite.svg#icon-menu-burger"></use>
           </svg>
         </button>
@@ -74,7 +74,7 @@
         </div>
             <a class="hero-link-scroll-down link" href="#benefits">scroll down
               <div class="scroll-down-wrapper">
-                <svg class="scroll-down-icon">
+                <svg class="scroll-down-icon" aria-label="scroll-down button">
                   <use href="./img/sprite.svg#icon-scroll-down"></use>
                 </svg>
               </div>
@@ -89,7 +89,7 @@
         <ul class="benefits-list list">
           <li class="benefits-item">
             <span class="benefits-icon-container">
-            <svg class="benefits-icon" width="32" height="32">
+            <svg class="benefits-icon" width="32" height="32" aria-label="chocolate icon">
               <use href="./img/sprite.svg#icon-chocolate"></use>
             </svg>
           </span>
@@ -103,7 +103,7 @@
           </li>
           <li class="benefits-item">
             <span class="benefits-icon-container">
-              <svg class="benefits-icon" width="26.667" height="26.667">
+              <svg class="benefits-icon" width="26.667" height="26.667" arial-label="coin icon">
                 <use href="./img/sprite.svg#icon-coin"></use>
               </svg>
             </span>
@@ -118,7 +118,7 @@
           </li>
           <li class="benefits-item">
             <span class="benefits-icon-container">
-              <svg class="benefits-icon" width="32" height="32">
+              <svg class="benefits-icon" width="32" height="32" aria-lable="coin icon">
                 <use href="./img/sprite.svg#icon-spoon"></use>
               </svg>
             </span>
@@ -154,7 +154,7 @@
                 ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png 1x,
                 ./img/ingredients/mobile-and-tablet/img-mobile-tablet-1@2x.png 2x
               ">
-              <img src="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png" alt="A bar of milk chocolate">
+              <img src="./img/ingredients/mobile-and-tablet/img-mobile-tablet-1.png" alt="A bar of milk chocolate" loading="lazy">
             </picture>            
             <h3 class="ingredients-item-title title-white">mILK CHOCOLATE</h3>
             <div class="ingredients-overlay">
@@ -174,7 +174,7 @@
                   ./img/ingredients/mobile-and-tablet/img-2-mobile-tablet.png 1x,
                   ./img/ingredients/mobile-and-tablet/img-2-mobile-tablet@2x.png 2x"
                   media="(min-width: 320px)">
-              <img src="./img/ingredients/mobile-and-tablet/img-2-mobile-tablet.png" alt="milk in a bottle">
+              <img src="./img/ingredients/mobile-and-tablet/img-2-mobile-tablet.png" alt="milk in a bottle" loading="lazy">
           </picture>
             <h3 class="ingredients-item-title">Milk</h3>
             <div class="ingredients-overlay">
@@ -200,6 +200,7 @@
               <img
                 src="./img/ingredients/mobile-and-tablet/img-3-mobile-tablet.png"
                 alt="Four nuts"
+                loading="lazy"
               >
             </picture>
             <div class="ingredients-overlay">
@@ -219,7 +220,7 @@
                   ./img/ingredients/mobile-and-tablet/img-4-mobile-tablet.png 1x,
                   ./img/ingredients/mobile-and-tablet/img-4-mobile-tablet@2x.png 2x"
                   media="(min-width: 367px)">
-              <img src="./img/ingredients/mobile-and-tablet/img-4-mobile-tablet.png" alt="ingredient description">
+              <img src="./img/ingredients/mobile-and-tablet/img-4-mobile-tablet.png" alt="ingredient description" loading="lazy">
           </picture>
             <h3 class="ingredients-item-title">sEMI - SWEET CHOCOLATE</h3>
             <div class="ingredients-overlay">
@@ -238,14 +239,12 @@
                   ./img/ingredients/mobile-and-tablet/img-5-mobile-tablet.png 1x,
                   ./img/ingredients/mobile-and-tablet/img-5-mobile-tablet@2x.png 2x"
                   media="(min-width: 368px)">
-              
-              <!-- Image element with alt text -->
-              <img src="./img/ingredients/mobile-and-tablet/img-5-mobile-tablet.png" alt="cacao">
+              <img src="./img/ingredients/mobile-and-tablet/img-5-mobile-tablet.png" alt="cacao" loading="lazy">
           </picture>
       
             <h3 class="ingredients-item-title title-white">CACAO</h3>
             <a href="" class="ingredients-link">
-              <svg class="ingredients-arrow arrow-white" height="24" width="24">
+              <svg class="ingredients-arrow arrow-white" height="24" width="24" aria-label="arrow">
                 <use href="./img/sprite.svg#icon-arrow"></use>
               </svg>
             </a>
@@ -260,11 +259,11 @@
                   ./img/ingredients/mobile-and-tablet/img-6-mobile-tablet.png 1x,
                   ./img/ingredients/mobile-and-tablet/img-6-mobile-tablet@2x.png 2x"
                   media="(min-width: 320px)">
-              <img src="./img/ingredients/mobile-and-tablet/img-6-mobile-tablet.png" alt="raspberry">
+              <img src="./img/ingredients/mobile-and-tablet/img-6-mobile-tablet.png" alt="raspberry" loading="lazy">
           </picture>
             <h3 class="ingredients-item-title">RASPBERRY</h3>
             <a href="" class="ingredients-link">
-              <svg class="ingredients-arrow arrow-orange" height="24" width="24">
+              <svg class="ingredients-arrow arrow-orange" height="24" width="24" aria-label="arrow">
                 <use href="./img/sprite.svg#icon-arrow"></use>
               </svg>
             </a>
@@ -279,11 +278,11 @@
                   srcset="./img/ingredients/mobile-and-tablet/img-7-mobile-tablet.png 1x,
                           ./img/ingredients/mobile-and-tablet/img-7-mobile-tablet@2x.png 2x"
                   media="(min-width: 320px)">
-              <img src="./img/ingredients/mobile-and-tablet/img-7-mobile-tablet.png" alt="coconut oil">
+              <img src="./img/ingredients/mobile-and-tablet/img-7-mobile-tablet.png" alt="coconut oil" loading="lazy">
           </picture>
             <h3 class="ingredients-item-title title-white">COCONUT OIL</h3>
             <a href="" class="ingredients-link">
-              <svg class="ingredients-arrow arrow-white" height="24" width="24">
+              <svg class="ingredients-arrow arrow-white" height="24" width="24" aria-label="arrow">
                 <use href="./img/sprite.svg#icon-arrow"></use>
               </svg>
             </a>
@@ -316,7 +315,7 @@
                       ./img/how-made/image_mob@2x.jpg 2x"
                   media="(min-width: 367px)"
               >
-              <img src="./img/how-made/image_mob.jpg" alt="a person making chocolate"/>
+              <img src="./img/how-made/image_mob.jpg" alt="a person making chocolate" loading="lazy"/>
           </picture>
         </div>
 
@@ -363,6 +362,7 @@
                   alt="dark chocolate with orange"
                   width="230"
                   height="201"
+                  loading="lazy"
               >
               <h3 class="our-poducts-item-title">Apple&Cranberry</h3>
               <p class="our-products-type-text">Milk chocolate</p>
@@ -376,6 +376,7 @@
                   alt="dark chocolate with orange"
                   width="230"
                   height="201"
+                  loading="lazy"
               >
               <h3 class="our-poducts-item-title">Lime&Sea salt</h3>
               <p class="our-products-type-text">Dark chocolate</p>
@@ -389,6 +390,7 @@
                   alt="dark chocolate with orange"
                   width="230"
                   height="201"
+                  loading="lazy"
               >
               <h3 class="our-poducts-item-title">Pineapple</h3>
               <p class="our-products-type-text">Dark chocolate</p>
@@ -402,6 +404,7 @@
                   alt="dark chocolate with orange"
                   width="230"
                   height="201"
+                  loading="lazy"
               >
               <h3 class="our-poducts-item-title">Classic</h3>
               <p class="our-products-type-text">Milk chocolate</p>
@@ -415,6 +418,7 @@
                   alt="dark chocolate with orange"
                   width="230"
                   height="201"
+                  loading="lazy"
               >
               <h3 class="our-poducts-item-title">Honey</h3>
               <p class="our-products-type-text">Milk chocolate</p>
@@ -428,6 +432,7 @@
       alt="dark chocolate with orange"
       width="230"
       height="201"
+      loading="lazy"
   >
               <h3 class="our-poducts-item-title">Roasted fruits</h3>
               <p class="our-products-type-text">Dark chocolate</p>
@@ -441,6 +446,7 @@
   alt="dark chocolate with orange"
   width="230"
   height="201"
+  loading="lazy"
 >
               <h3 class="our-poducts-item-title">Classic</h3>
               <p class="our-products-type-text">White chocolate</p>
@@ -466,7 +472,7 @@
   <source srcset="./img/top-sellers/img-1_mob.jpg 1x,
                   ./img/top-sellers/img-1_mob@2x.jpg 2x"
           media="(min-width: 320px)">
-  <img src="./img/top-sellers/img-1_mob.jpg" alt="chocolate with nuts">
+  <img src="./img/top-sellers/img-1_mob.jpg" alt="chocolate with nuts" loading="lazy">
 </picture>
 
       <p class="top-sellers-text">Chocolate with nuts is a delectable combination that brings together the smoothness of chocolate and the crunchiness of nuts. Whether it's milk chocolate, dark chocolate, or white chocolate, the addition of nuts adds a whole new dimension of flavor and texture.</p>
@@ -482,7 +488,7 @@
   <source srcset="./img/top-sellers/img-2_tab.jpg 1x,
           ./img/top-sellers/img-2_tab@2x.jpg 2x"
           media="(min-width: 768px)">
-  <img src="./img/top-sellers/img-2_tab.jpg" alt="chocolate with fruits">
+  <img src="./img/top-sellers/img-2_tab.jpg" alt="chocolate with fruits" loading="lazy">
 </picture>
       <p class="top-sellers-text">Chocolate with fruit is an unbeatable combination of two of the tastiest things in the world. This dessert combines delicate and aromatic chocolate with fresh and juicy fruits, creating a true poetry of taste.</p>
     </div>
@@ -494,7 +500,7 @@
   <source srcset="./img/top-sellers/img-3.jpg 1x,
                   ./img/top-sellers/img-3@2x.jpg 2x"
           media="(min-width: 1136px)">
-  <img src="./img/top-sellers/img-3.jpg" alt="chocolate with nuts">
+  <img src="./img/top-sellers/img-3.jpg" alt="chocolate with nuts" loading="lazy">
 </picture>
       <p class="top-sellers-text">Dark chocolate is a rich and indulgent treat that is beloved by many chocolate enthusiasts. It is made from cocoa beans, which are roasted, ground, and then processed to produce chocolate liquor. Dark chocolate contains a higher percentage of cocoa solids compared to milk chocolate.</p>
     </div>
@@ -516,6 +522,7 @@
                 alt="photo of Victoria Dobrzhanska"
                 width="80"
                 height="80"
+                loading="lazy"
                 >
       </div>
             <h3 class="loved-item-title">Victoria Dobrzhanska</h3>
@@ -532,6 +539,7 @@
                 alt="photo of Nazar Babenko"
                 width="80"
                 height="80"
+                loading="lazy"
                 >
         </div>
             <h3 class="loved-item-title">Nazar Babenko</h3>
@@ -549,6 +557,7 @@
           alt="photo of Olena Kampusch"
           width="80"
           height="80"
+          loading="lazy"
           >
 
         </div>
@@ -590,14 +599,14 @@
         </li>
         <li class="social-networks-item">
           <a class="social-networks-link link"  href="#" target="_blank">
-            <svg class="social-networks-icon" width="24" height="24">
+            <svg class="social-networks-icon" width="24" height="24" aria-label="instagram icon">
               <use href="./img/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social-networks-item">
           <a class="social-networks-link" href="#" target="_blank">
-            <svg class="social-networks-icon" width="24" height="24">
+            <svg class="social-networks-icon" width="24" height="24" aria-label="instagram icon">
               <use href="./img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
@@ -710,9 +719,6 @@
     </ul>
   </div>
 </div>
-
-<div class="cursor"></div>
-<div class="cursor2"></div>
 
 <script type="module" src="./js/mouse-move-animations.js"></script>
 <script type="module" src="./js/modal-helpers.js"></script>
