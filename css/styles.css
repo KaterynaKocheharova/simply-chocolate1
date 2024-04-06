@@ -772,7 +772,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-wrapper {
+  .ingredients-container {
     column-gap: 32px;
     row-gap: 32px;
     flex-wrap: wrap;
@@ -780,12 +780,12 @@ body {
 }
 
 @media screen and (min-width: 1136px) {
-  .swiper-wrapper {
+  .ingredients-container {
     row-gap: 24px;
   }
 }
 
-.swiper-slide {
+.ingredients-item {
   position: relative;
   overflow: hidden;
   padding: 32px 49px 28px 28px;
@@ -794,26 +794,26 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-slide {
+  .ingredients-item {
     padding: 28px 56px 28px 28px;
     width: calc((100% - 32px) / 2);
   }
 }
 
 @media screen and (min-width: 1136px) {
-  .swiper-slide {
+  .ingredients-item {
     padding: 28px 23px 28px 28px;
     width: calc((100% - 96px) / 4);
   }
 }
 
-.swiper-slide img {
+.ingredients-item img {
   width: 236px;
   height: 176px;
 }
 
 @media screen and (min-width: 1136px) {
-  .swiper-slide img {
+  .ingredients-item img {
     width: 214px;
     height: 160px;
   }
@@ -904,16 +904,16 @@ body {
   letter-spacing: -0.02em;
 }
 
-.swiper-slide:nth-child(even) {
+.ingredients-item:nth-child(even) {
   background-color: #fff;
 }
 
-.swiper-slide:nth-child(4n + 1) {
+.ingredients-item:nth-child(4n + 1) {
   color: #fff;
   background-color: #fd9222;
 }
 
-.swiper-slide:nth-child(4n + 3) {
+.ingredients-item:nth-child(4n + 3) {
   border-color: #1e1823;
   color: #fff;
   background-color: #1e1823;
@@ -1212,27 +1212,6 @@ body {
   }
 }
 
-.top-sellers-item:nth-child(2),
-.top-sellers-item:nth-child(3) {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .top-sellers-item:nth-child(2),
-  .top-sellers-item:nth-child(3) {
-    display: block;
-  }
-  .top-sellers-item:nth-child(3) {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1136px) {
-  .top-sellers-item:nth-child(3) {
-    display: block;
-  }
-}
-
 .top-sellers-item {
   padding-bottom: 24px;
   border-radius: 15px 5px 15px 15px;
@@ -1303,6 +1282,22 @@ body {
 .top-sellers-item:active .top-sellers-text {
   transform: translateY(0);
 }
+
+/* ========================================== SWIPER =================================================== */
+
+.swiper-pagination {
+  position: initial;
+  margin-top: 15px;
+  transform: unset !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fd9222;
+}
+
+
 
 /* ========================================================== LOVED ============================================================== */
 
