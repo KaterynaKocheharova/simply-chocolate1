@@ -950,11 +950,6 @@ body {
   }
 }
 
-.made-container {
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .made-title {
   margin-bottom: 32px;
 }
@@ -965,23 +960,37 @@ body {
   }
 }
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 */
+
 .picture-and-steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 20px;
+}
+
+@media screen and (min-width: 1136px) {
+  .picture-and-steps-container {
+    flex-direction: row;
+    column-gap: 20px;
+  }
 }
 
 .how-made-img-container {
   max-width: 335px;
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
   .how-made-img-container {
     max-width: 614px;
-    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .how-made-img-container {
+    max-width: 600px;
   }
 }
 
@@ -1000,23 +1009,8 @@ body {
 }
 
 @media screen and (min-width: 1136px) {
-  .picture-and-steps-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 20px;
-  }
-
-  @media screen and (min-width: 1136px) {
-    .how-made-img-container {
-      width: 600px;
-      margin-bottom: unset;
-    }
-  }
-
   .how-made-steps-container {
-    width: 516px;
-    padding: 32px;
+    max-width: 516px;
   }
 }
 
@@ -1353,23 +1347,6 @@ body {
     margin-bottom: 50px;
   }
 }
-/* 
-.loved-item:nth-child(2),
-.loved-item:nth-child(3) {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .loved-item:nth-child(2) {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1136px) {
-  .loved-item:nth-child(3) {
-    display: block;
-  }
-} */
 
 .reviews-swiper-pagination {
   margin-bottom: 25px;
