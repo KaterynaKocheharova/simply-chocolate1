@@ -2111,9 +2111,13 @@ transform: scale(1.5) translate(-50%, -50%);
   margin-right: auto;
   margin-left: auto;
   transform: unset !important;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .swiper-pagination-bullet-active {
   background-color:#fd9222;
+}
+
+.reviews-pagination {
+  margin-bottom: 32px;
 }
