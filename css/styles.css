@@ -1371,10 +1371,6 @@ body {
   }
 } */
 
-.reviews-swiper {
-  overflow: unset;
-}
-
 .reviews-swiper-pagination {
   margin-bottom: 25px;
 }
