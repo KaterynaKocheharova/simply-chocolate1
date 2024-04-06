@@ -1277,20 +1277,6 @@ body {
   transform: translateY(0);
 }
 
-/* ========================================== SWIPER =================================================== */
-
-.swiper-pagination {
-  position: initial;
-  margin-top: 15px;
-  transform: unset !important;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.swiper-pagination-bullet {
-  background-color: #fd9222;
-}
-
 /* ========================================================== LOVED ============================================================== */
 
 .loved-section {
@@ -1346,10 +1332,6 @@ body {
   .loved-list {
     margin-bottom: 50px;
   }
-}
-
-.reviews-swiper-pagination {
-  margin-bottom: 25px;
 }
 
 .loved-item {
@@ -2115,3 +2097,17 @@ background-color: black;
 opacity: 0.3;
 transform: scale(1.5) translate(-50%, -50%);
 } */
+
+/* ============================================= SWIPER =============================================== */
+
+.swiper-pagination {
+  position: initial;
+  margin-right: auto;
+  margin-left: auto;
+  transform: unset !important;
+  margin-top: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color:#fd9222;
+}

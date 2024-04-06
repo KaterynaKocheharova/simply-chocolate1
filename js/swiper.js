@@ -2,13 +2,7 @@ let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
 
-function isScreenWidthInRange(minWidth, maxWidth) {
-  const screenWidth = window.innerWidth;
-  return screenWidth >= minWidth && screenWidth <= maxWidth;
-}
-
-// Function to initialize Swiper instance
-function initializeSmallerScreenSwiper() {
+if(window.innerWidth <= 375 && window.innerWidth <= 767) {
   ingredientsSwiper = new Swiper('.ingredients-swiper', {
     pagination: {
       el: '.swiper-pagination',
@@ -16,16 +10,23 @@ function initializeSmallerScreenSwiper() {
     },
   });
 
+  topSellersSwiper = new Swiper('.top-sellers-swiper', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
   reviewsSwiper = new Swiper('.reviews-swiper', {
     pagination: {
       el: '.swiper-pagination',
-      dynamicBullets: true,
+      clickable: true,
     },
   });
 }
 
-function initializeBiggerScreenSwiper() {
-  topSellersSwiper = new Swiper('.ingredients-swiper', {
+if(window.innerWidth >= 768 && window.innerWidth <= 1135) {
+  topSellersSwiper = new Swiper('.top-sellers-swiper', {
     slidesPerView: 2,
     pagination: {
       el: '.swiper-pagination',
@@ -40,17 +41,27 @@ function initializeBiggerScreenSwiper() {
       clickable: true,
     },
   });
+
 }
 
-// Check screen width and initialize Swiper if it's within the desired range
-function checkScreenWidthAndInitializeSwiper() {
-  if (isScreenWidthInRange(375, 767)) {
-    initializeSmallerScreenSwiper();
-  } else if (window.innerWidth >= 768 && window.innerWidth < 1136) {
-    initializeBiggerScreenSwiper();
-  }
-}
+//   reviewsSwiper = new Swiper('.reviews-swiper', {
+//     pagination: {
+//       el: '.swiper-pagination',
+//       dynamicBullets: true,
+//     },
+//   });
 
-// Call the function when the window loads and when it resizes
-window.onload = checkScreenWidthAndInitializeSwiper;
-window.onresize = checkScreenWidthAndInitializeSwiper;
+
+
+//   reviewsSwiper = new Swiper('.reviews-swiper', {
+//     slidesPerView: 2,
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//   });
+
+
+// // Call the function when the window loads and when it resizes
+// window.onload = checkScreenWidthAndInitializeSwiper;
+// window.onresize = checkScreenWidthAndInitializeSwiper;
