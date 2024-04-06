@@ -10,14 +10,13 @@ function isScreenWidthInRange(minWidth, maxWidth) {
         pagination: {
           el: ".swiper-pagination",
           dynamicBullets: true,
-          modifierClass: "white-pagination"
         },
       });
   }
   
   // Check screen width and initialize Swiper if it's within the desired range
   function checkScreenWidthAndInitializeSwiper() {
-    if (isScreenWidthInRange(375, 767)) {
+    if (isScreenWidthInRange(320, 767)) {
       initializeSwiper();
     }
   }
