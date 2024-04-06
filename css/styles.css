@@ -773,6 +773,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .ingredients-container {
+    display: flex;
     column-gap: 32px;
     row-gap: 32px;
     flex-wrap: wrap;
@@ -1380,6 +1381,7 @@ body {
 
 .loved-item {
   position: relative;
+  height: 220px;
   /* max-width: 335px; */
   padding: 56px 18px 42px 18px;
   border-radius: 15px;
