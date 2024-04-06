@@ -201,8 +201,9 @@
             ingredients to the careful crafting of each individual piece, every
             step of our process adds up to one exceptional taste sensation.
           </p>
-          <ul class="ingredients-list list">
-            <li class="ingredients-item">
+          <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide white-pagination">
               <picture class="ingredients-image">
                 <source
                   media="(min-width: 1136px)"
@@ -241,8 +242,8 @@
                   milk chocolate is sold in the United States and Europe.
                 </p>
               </div>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide">
               <picture>
                 <source
                   srcset="
@@ -282,8 +283,8 @@
                   immune system.
                 </p>
               </div>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide">
               <picture>
                 <source
                   media="(min-width: 1136px)"
@@ -323,8 +324,8 @@
                 </p>
               </div>
               <h3 class="ingredients-item-title title-white">nuts</h3>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide">
               <picture>
                 <source
                   srcset="
@@ -367,8 +368,8 @@
                   chocolate is sweeter and more mellow.
                 </p>
               </div>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide white-pagination">
               <picture>
                 <source
                   srcset="
@@ -382,7 +383,7 @@
                     ./img/ingredients/mobile-and-tablet/img-5-mobile-tablet.png    1x,
                     ./img/ingredients/mobile-and-tablet/img-5-mobile-tablet@2x.png 2x
                   "
-                  media="(min-width: 368px)"
+                  media="(min-width: 375px)"
                 />
                 <img
                   src="./img/ingredients/mobile-and-tablet/img-5-mobile-tablet.png"
@@ -402,8 +403,8 @@
                   <use href="./img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide">
               <picture>
                 <source
                   srcset="
@@ -436,8 +437,8 @@
                   <use href="./img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
-            </li>
-            <li class="ingredients-item">
+            </div>
+            <div class="swiper-slide">
               <picture>
                 <source
                   srcset="
@@ -470,8 +471,9 @@
                   <use href="./img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </div>
         </div>
       </section>
       <!-- =================================================== HOW IT'S MADE =============================== -->
@@ -1122,6 +1124,7 @@
     <script type="module" src="./js/modal-helpers.js"></script>
     <script type="module" src="./js/review-form.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
+    <script type="module" src="./js/swiper.js"></script>
     <script src="./js/navigation-to-home-without-page-reloading.js"></script>
   </body>
 </html>

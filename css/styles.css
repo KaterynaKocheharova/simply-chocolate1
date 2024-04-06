@@ -771,28 +771,21 @@ body {
   }
 }
 
-.ingredients-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
 @media screen and (min-width: 768px) {
-  .ingredients-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 32px;
+  .swiper-wrapper {
     column-gap: 32px;
+    row-gap: 32px;
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (min-width: 1136px) {
-  .ingredients-list {
-    column-gap: 24px;
+  .swiper-wrapper {
+    row-gap: 24px;
   }
 }
 
-.ingredients-item {
+.swiper-slide {
   position: relative;
   overflow: hidden;
   padding: 32px 49px 28px 28px;
@@ -801,16 +794,28 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .ingredients-item {
+  .swiper-slide {
     padding: 28px 56px 28px 28px;
     width: calc((100% - 32px) / 2);
   }
 }
 
 @media screen and (min-width: 1136px) {
-  .ingredients-item {
+  .swiper-slide {
     padding: 28px 23px 28px 28px;
     width: calc((100% - 96px) / 4);
+  }
+}
+
+.swiper-slide img {
+  width: 236px;
+  height: 176px;
+}
+
+@media screen and (min-width: 1136px) {
+  .swiper-slide img {
+    width: 214px;
+    height: 160px;
   }
 }
 
@@ -859,7 +864,7 @@ body {
   }
 }
 
-.ingredients-item:hover .ingredients-overlay {
+.swiper-slide:hover .ingredients-overlay {
   transform: translateY(0%);
 }
 
@@ -899,16 +904,16 @@ body {
   letter-spacing: -0.02em;
 }
 
-.ingredients-item:nth-child(even) {
+.swiper-slide:nth-child(even) {
   background-color: #fff;
 }
 
-.ingredients-item:nth-child(4n + 1) {
+.swiper-slide:nth-child(4n + 1) {
   color: #fff;
   background-color: #fd9222;
 }
 
-.ingredients-item:nth-child(4n + 3) {
+.swiper-slide:nth-child(4n + 3) {
   border-color: #1e1823;
   color: #fff;
   background-color: #1e1823;
@@ -928,12 +933,6 @@ body {
 .arrow-orange {
   fill: transparent;
   stroke: #fd9222;
-}
-
-@media screen and (max-width: 767px) {
-  .ingredients-item:nth-child(n + 5) {
-    display: none;
-  }
 }
 
 /* =============================================== HOW IT'S MADE ========================================== */
