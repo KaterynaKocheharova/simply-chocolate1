@@ -905,6 +905,12 @@ body {
   letter-spacing: -0.02em;
 }
 
+@media screen and (min-width: 1136px) {
+  .ingredients-overlay-text {
+    font-size: 12px;
+  }
+}
+
 .ingredients-item:nth-child(even) {
   background-color: #fff;
 }
