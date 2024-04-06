@@ -807,8 +807,9 @@
           <h2 class="section-title loved-section-title">
             <span class="accent-color">chocolate</span> is loved
           </h2>
-          <ul class="loved-list list">
-            <li class="loved-item">
+          <div class="swiper mySwiper reviews-swiper">
+          <div class="swiper-wrapper loved-list list">
+            <li class="swiper-slide loved-item">
               <div class="reviews-image">
                 <img
                   srcset="
@@ -828,7 +829,7 @@
                 wafer, covered in a thin layer chocolate.
               </p>
             </li>
-            <li class="loved-item">
+            <li class="swiper-slide loved-item">
               <div class="reviews-image">
                 <img
                   srcset="
@@ -849,7 +850,7 @@
                 is good.
               </p>
             </li>
-            <li class="loved-item">
+            <li class="swiper-slide loved-item">
               <div class="reviews-image">
                 <img
                   srcset="
@@ -870,7 +871,9 @@
                 crunchy.
               </p>
             </li>
-          </ul>
+          </div>
+          <div class="swiper-pagination reviews-swiper-pagination"></div>
+        </div>
           <button class="review-btn" type="button" id="leaveReviewBtn">
             Leave a review
           </button>
