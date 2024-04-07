@@ -86,8 +86,8 @@ function initializeSwipers() {
 
 
 
-// // Initial execution
-// initializeSwipers();
+// Initial execution
+initializeSwipers();
 
 // // Event listener for window resize
 // window.addEventListener('resize', function() {
