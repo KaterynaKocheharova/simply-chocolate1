@@ -6,33 +6,33 @@ let reviewsSwiper;
 
 function initializeSwipers() {
   if (window.innerWidth <= 767) {
-    ingredientsSwiper = new Swiper('.ingredients-swiper', {
-      pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-      },
-    });
-
-    // ingredientsSwiper =  new Swiper(".ingredients-swiper", {
-    //   grabCursor: true,
-    //   effect: "creative",
-    //   creativeEffect: {
-    //     prev: {
-    //       shadow: true,
-    //       translate: [0, 0, -400],
-    //     },
-    //     next: {
-    //       translate: ["100%", 0, 0],
-    //     },
+    // ingredientsSwiper = new Swiper('.ingredients-swiper', {
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     dynamicBullets: true,
     //   },
     // });
 
-    topSellersSwiper = new Swiper('.top-sellers-swiper', {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+    ingredientsSwiper =  new Swiper(".ingredients-swiper", {
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
       },
     });
+
+    // topSellersSwiper = new Swiper('.top-sellers-swiper', {
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //   },
+    // });
 
     reviewsSwiper = new Swiper('.reviews-swiper', {
       pagination: {
@@ -41,10 +41,10 @@ function initializeSwipers() {
       },
     });
 
-    // topSellersSwiper = new Swiper(".top-sellers-swiper", {
-    //   effect: "cards",
-    //   grabCursor: true,
-    // })
+    topSellersSwiper = new Swiper(".top-sellers-swiper", {
+      effect: "cards",
+      grabCursor: true,
+    })
   }
 }
 
