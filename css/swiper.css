@@ -1,0 +1,19 @@
+.swiper-pagination {
+  position: initial;
+  margin-right: auto;
+  margin-left: auto;
+  transform: unset !important;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fd9222;
+}
+
+.reviews-pagination {
+  margin-bottom: 32px;
+}
+
+.reviews-swiper {
+  overflow: unset;
+}

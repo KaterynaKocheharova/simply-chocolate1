@@ -1,0 +1,131 @@
+.loved-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .loved-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .loved-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.loved-section-title {
+  margin-bottom: 74px;
+}
+
+@media screen and (min-width: 768px) {
+  .loved-section-title {
+    margin-bottom: 91px;
+  }
+}
+
+.loved-list {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .loved-list {
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .loved-list {
+    column-gap: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .loved-list {
+    margin-bottom: 50px;
+  }
+}
+
+.loved-item {
+  position: relative;
+  height: 220px;
+  padding: 56px 18px 42px 18px;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: #fff;
+  box-shadow: 0px 10px 100px 0px rgba(17, 17, 17, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .loved-item {
+    width: calc((100% - 16px) / 2);
+    padding: 56px 18px 26px 18px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .loved-item {
+    width: calc((100% - 56px) / 3);
+    padding: 56px 24px 24px 24px;
+  }
+}
+
+.reviews-image {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loved-item-title {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.loved-text {
+  color: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  font-weight: 400;
+}
+
+.review-btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 165px;
+  padding: 12px 28px;
+  color: #111;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid #fd9222;
+  transition: background-color 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .review-btn {
+    min-width: 222px;
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+}
+
+.review-btn:hover,
+.review-button:focus,
+.review-button:active {
+  background-color: #fd9222;
+  color: #fff;
+}
