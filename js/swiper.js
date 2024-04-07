@@ -1,5 +1,5 @@
 
-// const swiperPagination = document.querySelector(".swiper-pagination")
+const swiperPagination = document.querySelector(".swiper-pagination")
 let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
@@ -49,30 +49,30 @@ function initializeSwipers() {
 }
 
   if (window.innerWidth >= 768 && window.innerWidth <= 1135) {
-    topSellersSwiper = new Swiper('.top-sellers-swiper', {
-      slidesPerView: 2,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+    // topSellersSwiper = new Swiper('.top-sellers-swiper', {
+    //   slidesPerView: 2,
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //   },
+    // });
 
-  //   topSellersSwiper = new Swiper(".top-sellers-swiper", {
-  //     effect: "coverflow",
-  //     grabCursor: true,
-  //     centeredSlides: true,
-  //     slidesPerView: "auto",
-  //     coverflowEffect: {
-  //       rotate: 50,
-  //       stretch: 0,
-  //       depth: 100,
-  //       modifier: 1,
-  //       slideShadows: true,
-  //     },
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //     },
-  //   })
+    topSellersSwiper = new Swiper(".top-sellers-swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    })
 
     reviewsSwiper = new Swiper('.reviews-swiper', {
       slidesPerView: 2,
@@ -86,8 +86,8 @@ function initializeSwipers() {
 
 
 
-// Initial execution
-initializeSwipers();
+// // Initial execution
+// initializeSwipers();
 
 // // Event listener for window resize
 // window.addEventListener('resize', function() {
