@@ -1,5 +1,5 @@
-
 .top-sellers-section {
+  overflow-x: hidden;
   padding-top: 40px;
   padding-bottom: 40px;
 }

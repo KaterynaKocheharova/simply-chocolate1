@@ -240,6 +240,13 @@
   color: #fd9222;
 }
 
+@media screen and (max-width: 375px) {
+  .footer-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .footer-form {
   display: flex;
   gap: 8px;
