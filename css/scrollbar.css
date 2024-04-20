@@ -1,3 +1,4 @@
 .simplebar-scrollbar::before {
   background-color: #fd9222;
+  width: 5px;
 }

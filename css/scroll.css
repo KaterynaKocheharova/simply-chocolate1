@@ -1,5 +1,3 @@
-
-body.forbid-scroll {
-    overflow: hidden;
-  }
-  
+.forbid-scroll {
+  overflow-y: hidden;
+}
