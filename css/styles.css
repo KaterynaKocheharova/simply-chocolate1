@@ -1,31 +1,17 @@
-@import url("./global.css");
-@import url("./header.css");
-@import url("./mobile-menu.css");
-@import url("./hero.css");
-@import url("./benefits.css");
-@import url("./ingredients.css");
-@import url("./how-made.css");
-@import url("./products.css");
-@import url("./top-sellers.css");
-@import url("./reviews.css");
-@import url("./footer.css");
-@import url("./review-form.css");
-@import url("./scroll.css");
-@import url("./swiper.css");
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import url('./global.css');
+@import url('./header.css');
+@import url('./mobile-menu.css');
+@import url('./hero.css');
+@import url('./benefits.css');
+@import url('./ingredients.css');
+@import url('./how-made.css');
+@import url('./products.css');
+@import url('./top-sellers.css');
+@import url('./reviews.css');
+@import url('./footer.css');
+@import url('./review-form.css');
+@import url('./scroll.css');
+@import url('./swiper.css');
+@import url('./scrollbar.css');
 
 /* ============================================= SWIPER =============================================== */
-
-
