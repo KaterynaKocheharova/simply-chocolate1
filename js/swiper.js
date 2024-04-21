@@ -34,15 +34,24 @@ function initializeIngredientsSwiper() {
 
 window.addEventListener('resize', handleScreenResize);
 
+// function handleScreenResize() {
+//   if (window.innerWidth >= 768) {
+//     if (ingredientsSwiper) {
+//       ingredientsSwiper.destroy();
+//       ingredientsSwiper = null;
+//     }
+//   } else {
+//     initializeIngredientsSwiper();
+//   }
+// }
+
 function handleScreenResize() {
-  if (window.innerWidth >= 768) {
-    if (ingredientsSwiper) {
-      ingredientsSwiper.destroy();
-      ingredientsSwiper = null;
-    }
-  } else {
-    initializeIngredientsSwiper();
+  if (window.innerWidth >= 768 && ingredientsSwiper) {
+    ingredientsSwiper.destroy();
+    ingredientsSwiper = null;
+    return;
   }
+  initializeIngredientsSwiper();
 }
 
 // ======================= REVIEWS SWIPER
