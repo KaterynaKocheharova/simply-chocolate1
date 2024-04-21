@@ -10,27 +10,25 @@ let reviewsSwiper;
 initializeIngredientsSwiper();
 
 function initializeIngredientsSwiper() {
-  if (!ingredientsSwiper) {
-    if (window.innerWidth <= 767) {
-      ingredientsSwiper = new Swiper('.ingredients-swiper', {
-        grabCursor: true,
-        effect: 'creative',
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
+  if (!ingredientsSwiper && window.innerWidth <= 767) {
+    ingredientsSwiper = new Swiper('.ingredients-swiper', {
+      grabCursor: true,
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
         },
-      });
-    }
-  } else {
-    if (window.innerWidth > 767) {
-      ingredientsSwiper.destroy();
-      ingredientsSwiper = null;
-    }
+        next: {
+          translate: ['100%', 0, 0],
+        },
+      },
+    });
+    return;
+  }
+
+  if (ingredientsSwiper && window.innerWidth > 767) {
+    ingredientsSwiper.destroy();
   }
 }
 
