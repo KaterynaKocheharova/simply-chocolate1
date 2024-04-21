@@ -4,6 +4,9 @@ let reviewsSwiper;
 
 initializeSwipers();
 
+// add breakpoint, don't reinitialize swipers
+// add resize rule
+
 function initializeSwipers() {
   if (window.innerWidth <= 767) {
     ingredientsSwiper = new Swiper('.ingredients-swiper', {
@@ -57,10 +60,6 @@ function initializeSwipers() {
       },
     });
   }
-}
-
-function handleResize() {
-  initializeSwipers();
 }
 
 // Add event listener for the resize event
