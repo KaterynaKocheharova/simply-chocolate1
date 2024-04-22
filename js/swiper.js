@@ -2,8 +2,10 @@ let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
 
-// finish reviews swiper
 // ===================== INGREDIENTS SWIPER
+
+// overflow-hidden on swiper containers
+// delete the css for breakpoints at which we have swipers
 
 initializeIngredientsSwiper();
 
@@ -107,7 +109,6 @@ function initializeReviewsSwiper() {
         spaceBetween: 16,
       },
     },
-    centeredSlidesBound: true,
     grabCursor: true,
   });
 }
