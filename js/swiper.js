@@ -2,9 +2,6 @@ let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
 
-// add breakpoint, don't reinitialize swipers
-// add resize rule
-
 // ===================== INGREDIENTS SWIPER
 
 initializeIngredientsSwiper();
@@ -32,26 +29,50 @@ function initializeIngredientsSwiper() {
   }
 }
 
-window.addEventListener('resize', handleScreenResize);
+// ==================== TOP SELLERS SWIPER
 
-// function handleScreenResize() {
-//   if (window.innerWidth >= 768) {
-//     if (ingredientsSwiper) {
-//       ingredientsSwiper.destroy();
-//       ingredientsSwiper = null;
-//     }
-//   } else {
-//     initializeIngredientsSwiper();
-//   }
-// }
+initializeTopSellersSwiper();
+
+function initializeTopSellersSwiper() {
+  if (!topSellersSwiper && window.innerWidth < 1135) {
+    topSellersSwiper = new Swiper('.top-sellers-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      enabled: false,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+}
+
+// ====================== SCREEN RESIZE
+
+window.addEventListener('resize', handleScreenResize);
 
 function handleScreenResize() {
   if (window.innerWidth >= 768 && ingredientsSwiper) {
     ingredientsSwiper.destroy();
     ingredientsSwiper = null;
-    return;
+  } else {
+    initializeIngredientsSwiper();
   }
-  initializeIngredientsSwiper();
+
+  if (window.innerWidth >= 1135) {
+    topSellersSwiper.destroy();
+    topSellersSwiper = null;
+  } else {
+    initializeTopSellersSwiper();
+  }
 }
 
 // ======================= REVIEWS SWIPER
@@ -77,31 +98,6 @@ function handleScreenResize() {
 //     },
 //     centeredSlides: true,
 //     centeredSlidesBound: true,
-//   });
-// }
-
-// TOP SELLERS
-
-//   topSellersSwiper = new Swiper('.top-sellers-swiper', {
-//     effect: 'cards',
-//     grabCursor: true,
-//   });
-// } else if (window.innerWidth >= 768 && window.innerWidth <= 1135) {
-//   topSellersSwiper = new Swiper('.top-sellers-swiper', {
-//     effect: 'coverflow',
-//     grabCursor: true,
-//     centeredSlides: true,
-//     slidesPerView: 'auto',
-//     coverflowEffect: {
-//       rotate: 50,
-//       stretch: 0,
-//       depth: 100,
-//       modifier: 1,
-//       slideShadows: true,
-//     },
-//     pagination: {
-//       el: '.swiper-pagination',
-//     },
 //   });
 // }
 
