@@ -2,6 +2,9 @@ let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
 
+// finish reviews swiper
+// use notes left on my telephone
+
 // ===================== INGREDIENTS SWIPER
 
 initializeIngredientsSwiper();
@@ -40,7 +43,6 @@ function initializeTopSellersSwiper() {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
-      enabled: false,
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -67,9 +69,13 @@ function handleScreenResize() {
     initializeIngredientsSwiper();
   }
 
-  if (window.innerWidth >= 1135) {
+  if (window.innerWidth >= 1135 && topSellersSwiper) {
     topSellersSwiper.destroy();
     topSellersSwiper = null;
+    const swiperPagination = document.querySelector(
+      '.reviews-swiper-pagination'
+    );
+    swiperPagination.classList.add('pagination-hidden');
   } else {
     initializeTopSellersSwiper();
   }
@@ -100,25 +106,3 @@ function handleScreenResize() {
 //     centeredSlidesBound: true,
 //   });
 // }
-
-// swiper.destroy()
-// Destroy pagination
-
-// swiper.init()
-// Initialize pagination
-
-// enabled	boolean	true
-// Whether Swiper initially enabled. When Swiper is disabled, it will hide all navigation elements and won't respond to any events and interactions
-
-// grabCursor	boolean	false
-// This option may a little improve desktop usability. If true, user will see the "grab" cursor when hover on Swiper
-
-// keyboard	any
-// Enables navigation through slides using keyboard. Object with keyboard parameters or boolean true to enable with default settings
-
-// const swiper = new Swiper('.swiper', {
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: false,
-//   },
-// });
