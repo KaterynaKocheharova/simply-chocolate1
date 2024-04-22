@@ -3,8 +3,6 @@ let topSellersSwiper;
 let reviewsSwiper;
 
 // finish reviews swiper
-// use notes left on my telephone
-
 // ===================== INGREDIENTS SWIPER
 
 initializeIngredientsSwiper();
@@ -79,30 +77,37 @@ function handleScreenResize() {
   } else {
     initializeTopSellersSwiper();
   }
+
+  if (window.innerWidth >= 1135 && reviewsSwiper) {
+    reviewsSwiper.destroy();
+    reviewsSwiper = null;
+  } else if (!reviewsSwiper) {
+    initializeReviewsSwiper();
+  }
 }
 
 // ======================= REVIEWS SWIPER
 
-// initializeReviewsSwiper();
+initializeReviewsSwiper();
 
-// function initilizeReviewsSwiper() {
-//   reviewsSwiper = new Swiper('.reviews-swiper', {
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//     },
-//     clickable: true,
-//     breakpoints: {
-//       320: {
-//         slidesPerView: 1,
-//         spaceBetween: 20,
-//       },
-//       768: {
-//         slidesPerView: 2,
-//         spaceBetween: 16,
-//       },
-//     },
-//     centeredSlides: true,
-//     centeredSlidesBound: true,
-//   });
-// }
+function initializeReviewsSwiper() {
+  reviewsSwiper = new Swiper('.reviews-swiper', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    clickable: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+    },
+    centeredSlidesBound: true,
+    grabCursor: true,
+  });
+}
