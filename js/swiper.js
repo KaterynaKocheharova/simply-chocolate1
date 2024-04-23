@@ -1,12 +1,15 @@
 let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
+const reviewsSwiperPagination = document.querySelector(
+  '.reviews-swiper-pagination'
+);
+const reviewsPagination = document.querySelector('.reviews-pagination');
 
 // ===================== INGREDIENTS SWIPER
 
 // delete the css for breakpoints at which we have swipers
-// organize code better
-// try to get the appearance right
+// organize code better + experiments with parameters
 
 initializeIngredientsSwiper();
 
@@ -73,21 +76,20 @@ function handleScreenResize() {
   if (window.innerWidth >= 1135 && topSellersSwiper) {
     topSellersSwiper.destroy();
     topSellersSwiper = null;
-    const swiperPagination = document.querySelector(
-      '.reviews-swiper-pagination'
-    );
-    swiperPagination.classList.add('pagination-hidden');
+
+    reviewsSwiperPagination.classList.add('pagination-hidden');
   } else if (!topSellersSwiper) {
     initializeTopSellersSwiper();
+    reviewsSwiperPagination.classList.remove('pagination-hidden');
   }
 
   if (window.innerWidth >= 1135 && reviewsSwiper) {
     reviewsSwiper.destroy();
     reviewsSwiper = null;
-    const reviewsPagination = document.querySelector('.reviews-pagination');
     reviewsPagination.classList.add('pagination-hidden');
   } else if (!reviewsSwiper) {
     initializeReviewsSwiper();
+    reviewsPagination.classList.remove('pagination-hidden');
   }
 }
 
@@ -103,14 +105,13 @@ function initializeReviewsSwiper() {
         clickable: true,
       },
       clickable: true,
+      spaceBetween: 35,
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 20,
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 33,
         },
       },
       grabCursor: true,
