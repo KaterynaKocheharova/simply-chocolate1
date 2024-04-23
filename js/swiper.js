@@ -4,7 +4,6 @@ let reviewsSwiper;
 
 // ===================== INGREDIENTS SWIPER
 
-// overflow-hidden on swiper containers
 // delete the css for breakpoints at which we have swipers
 
 initializeIngredientsSwiper();
@@ -65,7 +64,7 @@ function handleScreenResize() {
   if (window.innerWidth >= 768 && ingredientsSwiper) {
     ingredientsSwiper.destroy();
     ingredientsSwiper = null;
-  } else {
+  } else if (!ingredientsSwiper) {
     initializeIngredientsSwiper();
   }
 
@@ -76,13 +75,15 @@ function handleScreenResize() {
       '.reviews-swiper-pagination'
     );
     swiperPagination.classList.add('pagination-hidden');
-  } else {
+  } else if (!topSellersSwiper) {
     initializeTopSellersSwiper();
   }
 
   if (window.innerWidth >= 1135 && reviewsSwiper) {
     reviewsSwiper.destroy();
     reviewsSwiper = null;
+    const reviewsPagination = document.querySelector('.reviews-pagination');
+    reviewsPagination.classList.add('pagination-hidden');
   } else if (!reviewsSwiper) {
     initializeReviewsSwiper();
   }
@@ -93,22 +94,24 @@ function handleScreenResize() {
 initializeReviewsSwiper();
 
 function initializeReviewsSwiper() {
-  reviewsSwiper = new Swiper('.reviews-swiper', {
-    pagination: {
-      el: '.swiper-pagination',
+  if (!reviewsSwiper && window.innerWidth <= 1135) {
+    reviewsSwiper = new Swiper('.reviews-swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       clickable: true,
-    },
-    clickable: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-    },
-    grabCursor: true,
-  });
+      grabCursor: true,
+    });
+  }
 }

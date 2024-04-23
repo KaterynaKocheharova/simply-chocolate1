@@ -6,6 +6,10 @@
   margin-top: 20px;
 }
 
+.pagination-hidden {
+  display: none;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #fd9222;
 }
