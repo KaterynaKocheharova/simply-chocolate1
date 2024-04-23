@@ -6,8 +6,7 @@
   margin-top: 20px;
 }
 
-.reviews-swiper-pagination.pagination-hidden,
-.top-sellers-swiper-pagination {
+.pagination-hidden {
   display: none;
 }
 

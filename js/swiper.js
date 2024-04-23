@@ -1,15 +1,14 @@
 let ingredientsSwiper;
 let topSellersSwiper;
 let reviewsSwiper;
-const reviewsSwiperPagination = document.querySelector(
-  '.reviews-swiper-pagination'
-);
+
 const reviewsPagination = document.querySelector('.reviews-pagination');
+const topSellersPagination = document.querySelector('.top-sellers-pagination');
 
 // ===================== INGREDIENTS SWIPER
 
-// delete the css for breakpoints at which we have swipers
-// organize code better + experiments with parameters
+// organize code better
+// experiments with parameters
 
 initializeIngredientsSwiper();
 
@@ -76,11 +75,10 @@ function handleScreenResize() {
   if (window.innerWidth >= 1135 && topSellersSwiper) {
     topSellersSwiper.destroy();
     topSellersSwiper = null;
-
-    reviewsSwiperPagination.classList.add('pagination-hidden');
+    topSellersPagination.classList.add('pagination-hidden');
   } else if (!topSellersSwiper) {
     initializeTopSellersSwiper();
-    reviewsSwiperPagination.classList.remove('pagination-hidden');
+    topSellersPagination.classList.remove('pagination-hidden');
   }
 
   if (window.innerWidth >= 1135 && reviewsSwiper) {
