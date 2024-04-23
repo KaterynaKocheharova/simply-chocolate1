@@ -5,6 +5,8 @@ let reviewsSwiper;
 // ===================== INGREDIENTS SWIPER
 
 // delete the css for breakpoints at which we have swipers
+// organize code better
+// try to get the appearance right
 
 initializeIngredientsSwiper();
 
@@ -108,7 +110,7 @@ function initializeReviewsSwiper() {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 16,
+          spaceBetween: 33,
         },
       },
       grabCursor: true,
