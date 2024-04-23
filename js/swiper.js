@@ -8,7 +8,8 @@ const topSellersPagination = document.querySelector('.top-sellers-pagination');
 // ===================== INGREDIENTS SWIPER
 
 // organize code better
-// experiments with parameters
+// prettify swipers
+// go on to a new task
 
 initializeIngredientsSwiper();
 
