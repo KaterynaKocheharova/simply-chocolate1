@@ -4,14 +4,50 @@ let reviewsSwiper;
 
 const reviewsPagination = document.querySelector('.reviews-pagination');
 const topSellersPagination = document.querySelector('.top-sellers-pagination');
-
-// ===================== INGREDIENTS SWIPER
+const ingredientsPagination = document.querySelector('.ingredients-pagination');
 
 // organize code better
 // prettify swipers
 // go on to a new task
 
 initializeIngredientsSwiper();
+initializeTopSellersSwiper();
+initializeReviewsSwiper();
+
+// ====================== SCREEN RESIZE
+
+window.addEventListener('resize', handleScreenResize);
+
+function handleScreenResize() {
+  if (window.innerWidth >= 768 && ingredientsSwiper) {
+    ingredientsSwiper.destroy();
+    ingredientsSwiper = null;
+    ingredientsPagination.classList.add('pagination-hidden');
+  } else if (!ingredientsSwiper) {
+    initializeIngredientsSwiper();
+    ingredientsPagination.classList.remove('pagination-hidden');
+  }
+
+  if (window.innerWidth >= 1135 && topSellersSwiper) {
+    topSellersSwiper.destroy();
+    topSellersSwiper = null;
+    topSellersPagination.classList.add('pagination-hidden');
+  } else if (!topSellersSwiper) {
+    initializeTopSellersSwiper();
+    topSellersPagination.classList.remove('pagination-hidden');
+  }
+
+  if (window.innerWidth >= 1135 && reviewsSwiper) {
+    reviewsSwiper.destroy();
+    reviewsSwiper = null;
+    reviewsPagination.classList.add('pagination-hidden');
+  } else if (!reviewsSwiper) {
+    initializeReviewsSwiper();
+    reviewsPagination.classList.remove('pagination-hidden');
+  }
+}
+
+// ===================== INGREDIENTS SWIPER
 
 function initializeIngredientsSwiper() {
   if (!ingredientsSwiper && window.innerWidth <= 767) {
@@ -27,6 +63,9 @@ function initializeIngredientsSwiper() {
           translate: ['100%', 0, 0],
         },
       },
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
     return;
   }
@@ -37,8 +76,6 @@ function initializeIngredientsSwiper() {
 }
 
 // ==================== TOP SELLERS SWIPER
-
-initializeTopSellersSwiper();
 
 function initializeTopSellersSwiper() {
   if (!topSellersSwiper && window.innerWidth < 1135) {
@@ -61,40 +98,7 @@ function initializeTopSellersSwiper() {
   }
 }
 
-// ====================== SCREEN RESIZE
-
-window.addEventListener('resize', handleScreenResize);
-
-function handleScreenResize() {
-  if (window.innerWidth >= 768 && ingredientsSwiper) {
-    ingredientsSwiper.destroy();
-    ingredientsSwiper = null;
-  } else if (!ingredientsSwiper) {
-    initializeIngredientsSwiper();
-  }
-
-  if (window.innerWidth >= 1135 && topSellersSwiper) {
-    topSellersSwiper.destroy();
-    topSellersSwiper = null;
-    topSellersPagination.classList.add('pagination-hidden');
-  } else if (!topSellersSwiper) {
-    initializeTopSellersSwiper();
-    topSellersPagination.classList.remove('pagination-hidden');
-  }
-
-  if (window.innerWidth >= 1135 && reviewsSwiper) {
-    reviewsSwiper.destroy();
-    reviewsSwiper = null;
-    reviewsPagination.classList.add('pagination-hidden');
-  } else if (!reviewsSwiper) {
-    initializeReviewsSwiper();
-    reviewsPagination.classList.remove('pagination-hidden');
-  }
-}
-
 // ======================= REVIEWS SWIPER
-
-initializeReviewsSwiper();
 
 function initializeReviewsSwiper() {
   if (!reviewsSwiper && window.innerWidth <= 1135) {

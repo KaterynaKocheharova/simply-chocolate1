@@ -14,7 +14,8 @@
   background-color: #fd9222;
 }
 
-.reviews-pagination {
+.reviews-pagination,
+.ingredients-pagination {
   margin-bottom: 32px;
 }
 
