@@ -1,123 +1,90 @@
-let ingredientsSwiper;
-let topSellersSwiper;
-let reviewsSwiper;
+const SWIPER_BREAKPOINTS = {
+  ingredients: 767,
+  topSellers: 1135,
+  reviews: 1135,
+};
 
-const reviewsPagination = document.querySelector('.reviews-pagination');
-const topSellersPagination = document.querySelector('.top-sellers-pagination');
-const ingredientsPagination = document.querySelector('.ingredients-pagination');
+const SWIPER_SELECTORS = {
+  ingredients: '.ingredients-swiper',
+  topSellers: '.top-sellers-swiper',
+  reviews: '.reviews-swiper',
+};
 
-// organize code better
-// prettify swipers
-// go on to a new task
+const SWIPER_PAGINATION_SELECTORS = {
+  ingredients: '.ingredients-pagination',
+  topSellers: '.top-sellers-pagination',
+  reviews: '.reviews-pagination',
+};
 
-initializeIngredientsSwiper();
-initializeTopSellersSwiper();
-initializeReviewsSwiper();
+window.addEventListener('resize', initializeSwipers);
 
-// ====================== SCREEN RESIZE
+let swipers = {};
 
-window.addEventListener('resize', handleScreenResize);
-
-function handleScreenResize() {
-  if (window.innerWidth >= 768 && ingredientsSwiper) {
-    ingredientsSwiper.destroy();
-    ingredientsSwiper = null;
-    ingredientsPagination.classList.add('pagination-hidden');
-  } else if (!ingredientsSwiper) {
-    initializeIngredientsSwiper();
-    ingredientsPagination.classList.remove('pagination-hidden');
-  }
-
-  if (window.innerWidth >= 1135 && topSellersSwiper) {
-    topSellersSwiper.destroy();
-    topSellersSwiper = null;
-    topSellersPagination.classList.add('pagination-hidden');
-  } else if (!topSellersSwiper) {
-    initializeTopSellersSwiper();
-    topSellersPagination.classList.remove('pagination-hidden');
-  }
-
-  if (window.innerWidth >= 1135 && reviewsSwiper) {
-    reviewsSwiper.destroy();
-    reviewsSwiper = null;
-    reviewsPagination.classList.add('pagination-hidden');
-  } else if (!reviewsSwiper) {
-    initializeReviewsSwiper();
-    reviewsPagination.classList.remove('pagination-hidden');
+function initializeSwiper(selector, config) {
+  if (!swipers[selector] && window.innerWidth <= SWIPER_BREAKPOINTS[selector]) {
+    swipers[selector] = new Swiper(SWIPER_SELECTORS[selector], config);
+  } else if (
+    swipers[selector] &&
+    window.innerWidth > SWIPER_BREAKPOINTS[selector]
+  ) {
+    swipers[selector].destroy();
+    swipers[selector] = null;
+    document
+      .querySelector(SWIPER_PAGINATION_SELECTORS[selector])
+      .classList.add('pagination-hidden');
   }
 }
 
-// ===================== INGREDIENTS SWIPER
-
-function initializeIngredientsSwiper() {
-  if (!ingredientsSwiper && window.innerWidth <= 767) {
-    ingredientsSwiper = new Swiper('.ingredients-swiper', {
-      grabCursor: true,
-      effect: 'creative',
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
+function initializeSwipers() {
+  initializeSwiper('ingredients', {
+    grabCursor: true,
+    effect: 'creative',
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
       },
-      pagination: {
-        el: '.swiper-pagination',
+      next: {
+        translate: ['100%', 0, 0],
       },
-    });
-    return;
-  }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 
-  if (ingredientsSwiper && window.innerWidth > 767) {
-    ingredientsSwiper.destroy();
-  }
-}
+  initializeSwiper('topSellers', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 
-// ==================== TOP SELLERS SWIPER
-
-function initializeTopSellersSwiper() {
-  if (!topSellersSwiper && window.innerWidth < 1135) {
-    topSellersSwiper = new Swiper('.top-sellers-swiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  }
-}
-
-// ======================= REVIEWS SWIPER
-
-function initializeReviewsSwiper() {
-  if (!reviewsSwiper && window.innerWidth <= 1135) {
-    reviewsSwiper = new Swiper('.reviews-swiper', {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+  initializeSwiper('reviews', {
+    pagination: {
+      el: '.swiper-pagination',
       clickable: true,
-      spaceBetween: 35,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
+    },
+    clickable: true,
+    spaceBetween: 35,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
       },
-      grabCursor: true,
-    });
-  }
+      768: {
+        slidesPerView: 2,
+      },
+    },
+    grabCursor: true,
+  });
 }
