@@ -931,6 +931,7 @@
                   <a
                     href="mailto:simplychoc@gmail.com"
                     class="contacts-list-link link footer-contacts-bottom-link"
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                     >simplychoc@gmail.com</a
                   >
                 </li>
@@ -995,7 +996,7 @@
           <form class="footer-form" action="#" method="post">
             <input
               type="email"
-              class="footer-email-input"
+              class="footer-email-input three-dots"
               placeholder="Enter your email"
             />
             <button class="footer-input-button" type="submit">Subscribe</button>
@@ -1025,7 +1026,7 @@
             <label class="form-label" for="user-name">Name</label>
             <div class="form-field-icon-container">
               <input
-                class="form-field"
+                class="form-field three-dots"
                 id="user-name"
                 name="name"
                 type="text"
@@ -1040,10 +1041,11 @@
             <label class="form-label" for="user-email">Email</label>
             <div class="form-field-icon-container">
               <input
-                class="form-field"
+                class="form-field three-dots"
                 id="user-email"
                 name="email"
                 type="email"
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                 required
               />
               <svg class="form-field-icon" aria-label="email icon">
@@ -1055,7 +1057,7 @@
             <label class="form-label" for="user-tel">Phone number</label>
             <div class="form-field-icon-container">
               <input
-                class="form-field"
+                class="form-field three-dots"
                 id="user-tel"
                 name="tel"
                 type="tel"
