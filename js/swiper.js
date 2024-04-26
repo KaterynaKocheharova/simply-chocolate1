@@ -88,3 +88,5 @@ function initializeSwipers() {
     grabCursor: true,
   });
 }
+
+initializeSwipers();

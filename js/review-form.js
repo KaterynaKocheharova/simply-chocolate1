@@ -1,6 +1,7 @@
 'use strict';
 
 import { forbidScroll, allowScroll } from './forbid-scroll.js';
+import { showMessage } from './izitoast.js';
 
 // ===================================== VARIABLES
 
@@ -34,31 +35,28 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// reviewForm.addEventListener("submit", handleSubmit);
+reviewForm.addEventListener('submit', onReviewSubmit);
 
-// function handleSubmit(event) {
-// event.preventDefault();
-// const elements = event.target.elements;
-// console.log(
-//     {
-//         name: elements.name.value.trim(),
-//         email: elements.email.value.trim(),
-//         number: elements.tel.value.trim(),
-//         email: elements.comment.value.trim(),
-//     }
-// )
-// event.target.reset();
-// }
+function onReviewSubmit(event) {
+  event.preventDefault();
+  const elements = event.target.elements;
+  let isFormValid = true;
 
-// const reviewFormFileds = {
-//   name: "",
-//   email: "",
-//   phone: "",
-//   comment: "",
-//   acceptTerms: ""
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].value.trim() === '') {
+      isFormValid = false;
+      break;
+    }
+  }
 
-// }
+  if (isFormValid) {
+    showMessage('success', 'Great! Thank you for your review');
+    event.currentTarget.reset();
+  } else {
+    showMessage('warning', 'Make sure you filled in all the input fields');
+  }
+}
 
-// function setInputsValues(form) {
-
-// }
+// add novalidate and remove required from form and input fields
+// make sure the messages appear when they should; maybe there's an issue with checkbox,
+// style the toasts
