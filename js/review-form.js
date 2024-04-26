@@ -1,6 +1,7 @@
 'use strict';
 
 import { forbidScroll, allowScroll } from './forbid-scroll.js';
+
 // ===================================== VARIABLES
 
 const reviewForm = document.querySelector('.review-form-backdrop');
@@ -59,6 +60,5 @@ function closeModalOnEscHandler(event) {
 // }
 
 // function setInputsValues(form) {
-
 
 // }
