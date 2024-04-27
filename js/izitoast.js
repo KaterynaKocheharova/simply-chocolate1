@@ -15,7 +15,10 @@ export function showMessage(type, message) {
     case 'success':
       iziToast.success({
         ...generalParams,
-        class: 'toast success-toast',
+        class: 'custom-toast success-toast',
+        backgroundColor: '#fd9222',
+        messageSize: '16px',
+        messageColor: '#fff',
       });
       break;
     case 'warning':

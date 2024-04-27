@@ -39,24 +39,6 @@ reviewForm.addEventListener('submit', onReviewSubmit);
 
 function onReviewSubmit(event) {
   event.preventDefault();
-  const elements = event.target.elements;
-  let isFormValid = true;
-
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i].value.trim() === '') {
-      isFormValid = false;
-      break;
-    }
-  }
-
-  if (isFormValid) {
-    showMessage('success', 'Great! Thank you for your review');
-    event.currentTarget.reset();
-  } else {
-    showMessage('warning', 'Make sure you filled in all the input fields');
-  }
+  showMessage('success', 'Thank you fo your review');
+  event.currentTarget.reset();
 }
-
-// add novalidate and remove required from form and input fields
-// make sure the messages appear when they should; maybe there's an issue with checkbox,
-// style the toasts
