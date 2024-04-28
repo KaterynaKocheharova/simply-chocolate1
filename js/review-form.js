@@ -35,6 +35,7 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
+// separate checkForEmptyFields function
 // validate each element separately
 // add messages while inputting in some fields showing exactly what's wrong
 // add posting data to server
