@@ -1022,7 +1022,7 @@
           LEAVE A REVIEW <br />
           ABOUT <span class="accent-color">OUR CHOCOLATE</span>
         </p>
-        <form class="form-biggest-warpper">
+        <form class="review-form" novalidate>
           <div class="form-field-wrapper">
             <label class="form-label" for="user-name">Name</label>
             <div class="form-field-icon-container">
@@ -1031,7 +1031,6 @@
                 id="user-name"
                 name="name"
                 type="text"
-                required
               />
               <svg class="form-field-icon" aria-label="user icon">
                 <use href="./img/sprite.svg#icon-user"></use>
@@ -1046,8 +1045,6 @@
                 id="user-email"
                 name="email"
                 type="email"
-                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-                required
               />
               <svg class="form-field-icon" aria-label="email icon">
                 <use href="./img/sprite.svg#icon-mail"></use>
@@ -1062,7 +1059,6 @@
                 id="user-tel"
                 name="tel"
                 type="tel"
-                required
               />
               <svg class="form-field-icon" aria-label="phone icon">
                 <use href="./img/sprite.svg#icon-phone"></use>
@@ -1076,17 +1072,15 @@
               id="user-comment"
               name="comment"
               placeholder="Enter text"
-              required
             ></textarea>
           </div>
           <div class="checkbox-container">
             <input
               class="form-checkbox visually-hidden"
               id="privacy-policy-checkbox"
-              name="privacy-policy-radio"
+              name="privacyPolicyCheckbox"
               type="checkbox"
               value="true"
-              required
             />
             <label
               class="form-label checkbox-label"
