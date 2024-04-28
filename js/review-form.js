@@ -41,6 +41,7 @@ function closeModalOnEscHandler(event) {
 // add posting data to server
 // add success message
 // add failure message
+// style all message
 
 const reviewForm = document.querySelector('.review-form');
 
