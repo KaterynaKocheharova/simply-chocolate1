@@ -35,7 +35,7 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// separate checkForEmptyFields function
+// put helper validate form functions if a separate file
 // validate each element separately
 // add messages while inputting in some fields showing exactly what's wrong
 // add posting data to server
@@ -64,7 +64,43 @@ function validateReviewForm(formData) {
   const commentValue = formData.get('comment').trim();
   const privacyPolicyCheckbox = formData.get('privacyPolicyCheckbox');
 
-  // ================================== CHECK FOR EMPTY FIELDS
+  // check for empty fields
+  if (
+    !checkForEmptyFields(
+      nameValue,
+      emailValue,
+      telephoneValue,
+      commentValue,
+      privacyPolicyCheckbox
+    )
+  ) {
+    showMessage('warning', 'Fill in all fields');
+    return;
+  }
+
+  // check for incorrectly filled inputs
+  if (
+    !validateEmail(emailValue) ||
+    !validateName(nameValue) ||
+    !validateTelephone(telephoneValue) ||
+    !validateComment(commentValue)
+  ) {
+    showMessage(
+      'warning',
+      'Be careful with input fields. Follow instructions you see under them'
+    );
+    return;
+  }
+  return true;
+}
+
+function checkForEmptyFields(
+  nameValue,
+  emailValue,
+  telephoneValue,
+  commentValue,
+  privacyPolicyCheckbox
+) {
   if (
     nameValue === '' ||
     emailValue === '' ||
@@ -72,21 +108,10 @@ function validateReviewForm(formData) {
     commentValue === '' ||
     !privacyPolicyCheckbox
   ) {
-    showMessage('error', 'Fill in all fields');
-    return;
+    return false;
+  } else {
+    return true;
   }
-
-  // if (!validateEmail(email)) {
-  //   showMessage('error', 'Please enter a valid email address.');
-  //   return false;
-  // }
-
-  // if (!validateTelephone(telephone)) {
-  //   showMessage('error', 'Please enter a valid telephone number.');
-  //   return false;
-  // }
-
-  // return true;
 }
 
 function validateEmail(email) {
@@ -94,28 +119,32 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-// Improved telephone validation
 function validateTelephone(telephone) {
-  // Check if the input consists only of digits and has a minimum length of 8
   return /^\d{8,}$/.test(telephone);
 }
 
-// Function to validate names in Latin and Cyrillic alphabets
 function validateName(name) {
-  // Regular expression to match valid characters in names
   const regex = /^[A-Za-z\u00C0-\u017F\u0400-\u04FF\s]+$/;
   return regex.test(name);
 }
 
-// Function to validate a message
-function validateMessage(message, maxLength = 500) {
-  // Check if the message length exceeds the maximum length
-  if (message.length > maxLength) {
+function validateComment(comment, maxLength = 500) {
+  if (comment.length > maxLength) {
     return false;
   }
-  // Add additional criteria for message validation if needed
-  // For example, checking for specific characters, words, etc.
-
-  // Return true if the message passes all criteria
   return true;
 }
+
+// ================================== CHECK FOR EMPTY FIELDS
+
+// if (!validateEmail(email)) {
+//   showMessage('error', 'Please enter a valid email address.');
+//   return false;
+// }
+
+// if (!validateTelephone(telephone)) {
+//   showMessage('error', 'Please enter a valid telephone number.');
+//   return false;
+// }
+
+// return true;
