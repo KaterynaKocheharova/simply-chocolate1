@@ -3,6 +3,14 @@
 import { forbidScroll, allowScroll } from './forbid-scroll.js';
 import { showMessage } from './izitoast.js';
 
+import {
+  checkForEmptyFields,
+  validateEmail,
+  validateName,
+  validateComment,
+  validateTelephone,
+} from './form-validation-helpers.js';
+
 // ===================================== VARIABLES
 
 const reviewFormBackdrop = document.querySelector('.review-form-backdrop');
@@ -34,14 +42,14 @@ function closeModalOnEscHandler(event) {
 }
 
 // ================================== FORM HANDLER
-
-// put helper validate form functions if a separate file
-// validate each element separately
-// add messages while inputting in some fields showing exactly what's wrong
+// style the messages
+// add a hidden class
+// handle class change with js
+// message to a checkbox
 // add posting data to server
 // add success message
 // add failure message
-// style all message
+// style all izitoast messages
 
 const reviewForm = document.querySelector('.review-form');
 
@@ -93,58 +101,3 @@ function validateReviewForm(formData) {
   }
   return true;
 }
-
-function checkForEmptyFields(
-  nameValue,
-  emailValue,
-  telephoneValue,
-  commentValue,
-  privacyPolicyCheckbox
-) {
-  if (
-    nameValue === '' ||
-    emailValue === '' ||
-    telephoneValue === '' ||
-    commentValue === '' ||
-    !privacyPolicyCheckbox
-  ) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function validateEmail(email) {
-  const regex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-  return regex.test(email);
-}
-
-function validateTelephone(telephone) {
-  return /^\d{8,}$/.test(telephone);
-}
-
-function validateName(name) {
-  const regex = /^[A-Za-z\u00C0-\u017F\u0400-\u04FF\s]+$/;
-  return regex.test(name);
-}
-
-function validateComment(comment, maxLength = 500) {
-  if (comment.length > maxLength) {
-    return false;
-  }
-  return true;
-}
-
-// ================================== CHECK FOR EMPTY FIELDS
-
-// if (!validateEmail(email)) {
-//   showMessage('error', 'Please enter a valid email address.');
-//   return false;
-// }
-
-// if (!validateTelephone(telephone)) {
-//   showMessage('error', 'Please enter a valid telephone number.');
-//   return false;
-// }
-
-// return true;
