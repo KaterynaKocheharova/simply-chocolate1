@@ -101,3 +101,5 @@ function validateReviewForm(formData) {
   }
   return true;
 }
+
+// ============================== HANDLING ERROR MESSAGES UNDER INPUTS
