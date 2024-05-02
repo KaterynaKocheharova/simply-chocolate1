@@ -42,14 +42,14 @@ function closeModalOnEscHandler(event) {
 }
 
 // ================================== FORM HANDLER
-// style the messages
-// add a hidden class
-// handle class change with js
+
 // message to a checkbox
+// restyle error and success messages
 // add posting data to server
 // add success message
 // add failure message
 // style all izitoast messages
+// shorten the code
 
 const reviewForm = document.querySelector('.review-form');
 
@@ -103,3 +103,58 @@ function validateReviewForm(formData) {
 }
 
 // ============================== HANDLING ERROR MESSAGES UNDER INPUTS
+
+const reviewUserName = document.querySelector('.review-form-user-name-input');
+const reviewUserEmail = document.querySelector('.review-form-user-email-input');
+const reviewUserTel = document.querySelector('.review-form-user-tel-input');
+const reviewUserComment = document.querySelector('.reviw-form-comment');
+const nameSuccessText = document.querySelector('.name-success-text');
+const emailSuccessText = document.querySelector('.email-success-text');
+const telSuccessText = document.querySelector('.tel-success-text');
+const commentSuccessText = document.querySelector('.comment-success-text');
+const nameErrorText = document.querySelector('.name-error-text');
+const emailErrorText = document.querySelector('.email-error-text');
+const telErrorText = document.querySelector('.tel-error-text');
+const commentErrorText = document.querySelector('.comment-error-text');
+
+function showInputMessage(isValid, successElement, errorElement) {
+  if (isValid) {
+    successElement.classList.remove('hidden');
+    errorElement.classList.add('hidden');
+  } else {
+    successElement.classList.add('hidden');
+    errorElement.classList.remove('hidden');
+  }
+}
+
+reviewUserName.addEventListener('change', event => {
+  showInputMessage(
+    validateName(event.currentTarget.value),
+    nameSuccessText,
+    nameErrorText
+  );
+});
+
+reviewUserEmail.addEventListener('change', event => {
+  showInputMessage(
+    validateEmail(event.currentTarget.value),
+    emailSuccessText,
+    emailErrorText
+  );
+});
+
+reviewUserTel.addEventListener('change', event => {
+  showInputMessage(
+    validateTelephone(event.currentTarget.value),
+    telSuccessText,
+    telErrorText
+  );
+});
+
+reviewUserComment.addEventListener('change', event => {
+  showInputMessage(
+    validateComment(event.currentTarget.value),
+    commentSuccessText,
+    commentErrorText
+  );
+});

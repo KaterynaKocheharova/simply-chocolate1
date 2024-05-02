@@ -32,8 +32,8 @@ export function validateName(name) {
   return regex.test(name);
 }
 
-export function validateComment(comment, maxLength = 500) {
-  if (comment.length > maxLength) {
+export function validateComment(comment, maxLength = 500, minLength = 50) {
+  if (comment.length > maxLength || comment.length < minLength) {
     return false;
   }
   return true;
