@@ -43,7 +43,7 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// style warning toast - bg and errors in the form should also match
+// delete success form messages + check easy toast + fix sth
 // add posting data to server
 // shorten the code
 

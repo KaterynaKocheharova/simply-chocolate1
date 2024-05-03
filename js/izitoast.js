@@ -4,7 +4,6 @@ export function showMessage(type, message) {
     timeout: false,
     position: 'topRight',
     zindex: 999999999999999,
-    maxWidth: '70%',
   };
   switch (type) {
     case 'info':
@@ -17,9 +16,6 @@ export function showMessage(type, message) {
       iziToast.success({
         ...generalParams,
         class: 'custom-toast success-toast',
-        backgroundColor: '#008080',
-        messageSize: '16px',
-        messageColor: '#111',
       });
       break;
     case 'warning':
