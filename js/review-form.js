@@ -44,6 +44,7 @@ function closeModalOnEscHandler(event) {
 // ================================== FORM HANDLER
 
 // remove success message at all
+// make error message under inputs accent color
 // add posting data to server
 // shorten the code
 
