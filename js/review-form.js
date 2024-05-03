@@ -43,12 +43,8 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// message to a checkbox
-// restyle error and success messages
+// style warning toast - bg and errors in the form should also match
 // add posting data to server
-// add success message
-// add failure message
-// style all izitoast messages
 // shorten the code
 
 const reviewForm = document.querySelector('.review-form');
@@ -82,7 +78,10 @@ function validateReviewForm(formData) {
       privacyPolicyCheckbox
     )
   ) {
-    showMessage('warning', 'Fill in all fields');
+    showMessage(
+      'warning',
+      'Fill in all fields and tick the privacy policy checkbox'
+    );
     return;
   }
 
