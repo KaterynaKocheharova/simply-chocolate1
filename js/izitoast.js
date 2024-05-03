@@ -1,7 +1,6 @@
 export function showMessage(type, message) {
   const generalParams = {
     message,
-    timeout: false,
     position: 'topRight',
     zindex: 999999999999999,
   };

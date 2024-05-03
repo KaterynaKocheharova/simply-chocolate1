@@ -43,7 +43,7 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// delete success form messages + check easy toast + fix sth
+// remove success message at all
 // add posting data to server
 // shorten the code
 
