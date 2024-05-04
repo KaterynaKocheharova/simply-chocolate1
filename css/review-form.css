@@ -281,12 +281,8 @@
   }
 }
 
-.success-text {
-  color: #008080;
-}
-
 .error-text {
-  color: red;
+  color: #fd9222;
 }
 
 .hidden {

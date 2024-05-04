@@ -2,6 +2,7 @@
 
 import { forbidScroll, allowScroll } from './forbid-scroll.js';
 import { showMessage } from './izitoast.js';
+import postReview from './api.js';
 
 import {
   checkForEmptyFields,
@@ -43,18 +44,21 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// remove success message at all
-// make error message under inputs accent color
+// https://github.com/mockapi-io/docs/wiki/Quick-start-guide
 // add posting data to server
 // shorten the code
 
 const reviewForm = document.querySelector('.review-form');
 
-function onReviewSubmit(event) {
+async function onReviewSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
   if (validateReviewForm(formData)) {
+    await postReview({
+      name: formData.get('name').trim(),
+      comment: formData.get('comment').trim(),
+    });
     showMessage('success', 'Thank you for your review');
     event.currentTarget.reset();
   }
