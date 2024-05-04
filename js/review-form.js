@@ -44,21 +44,15 @@ function closeModalOnEscHandler(event) {
 
 // ================================== FORM HANDLER
 
-// https://github.com/mockapi-io/docs/wiki/Quick-start-guide
-// add posting data to server
 // shorten the code
 
 const reviewForm = document.querySelector('.review-form');
 
-async function onReviewSubmit(event) {
+function onReviewSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
   if (validateReviewForm(formData)) {
-    await postReview({
-      name: formData.get('name').trim(),
-      comment: formData.get('comment').trim(),
-    });
     showMessage('success', 'Thank you for your review');
     event.currentTarget.reset();
   }
@@ -73,7 +67,6 @@ function validateReviewForm(formData) {
   const commentValue = formData.get('comment').trim();
   const privacyPolicyCheckbox = formData.get('privacyPolicyCheckbox');
 
-  // check for empty fields
   if (
     !checkForEmptyFields(
       nameValue,
