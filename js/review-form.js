@@ -108,53 +108,35 @@ const reviewUserName = document.querySelector('.review-form-user-name-input');
 const reviewUserEmail = document.querySelector('.review-form-user-email-input');
 const reviewUserTel = document.querySelector('.review-form-user-tel-input');
 const reviewUserComment = document.querySelector('.reviw-form-comment');
-const nameSuccessText = document.querySelector('.name-success-text');
-const emailSuccessText = document.querySelector('.email-success-text');
-const telSuccessText = document.querySelector('.tel-success-text');
-const commentSuccessText = document.querySelector('.comment-success-text');
+
 const nameErrorText = document.querySelector('.name-error-text');
 const emailErrorText = document.querySelector('.email-error-text');
 const telErrorText = document.querySelector('.tel-error-text');
 const commentErrorText = document.querySelector('.comment-error-text');
 
-function showInputMessage(isValid, successElement, errorElement) {
+function showInputMessage(isValid, errorElement) {
   if (isValid) {
-    successElement.classList.remove('hidden');
     errorElement.classList.add('hidden');
   } else {
-    successElement.classList.add('hidden');
     errorElement.classList.remove('hidden');
   }
 }
 
 reviewUserName.addEventListener('change', event => {
-  showInputMessage(
-    validateName(event.currentTarget.value),
-    nameSuccessText,
-    nameErrorText
-  );
+  showInputMessage(validateName(event.currentTarget.value), nameErrorText);
 });
 
 reviewUserEmail.addEventListener('change', event => {
-  showInputMessage(
-    validateEmail(event.currentTarget.value),
-    emailSuccessText,
-    emailErrorText
-  );
+  showInputMessage(validateEmail(event.currentTarget.value), emailErrorText);
 });
 
 reviewUserTel.addEventListener('change', event => {
-  showInputMessage(
-    validateTelephone(event.currentTarget.value),
-    telSuccessText,
-    telErrorText
-  );
+  showInputMessage(validateTelephone(event.currentTarget.value), telErrorText);
 });
 
 reviewUserComment.addEventListener('change', event => {
   showInputMessage(
     validateComment(event.currentTarget.value),
-    commentSuccessText,
     commentErrorText
   );
 });
