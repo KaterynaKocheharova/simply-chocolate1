@@ -9,7 +9,7 @@ import {
 const reviewUserName = document.querySelector('.review-form-user-name-input');
 const reviewUserEmail = document.querySelector('.review-form-user-email-input');
 const reviewUserTel = document.querySelector('.review-form-user-tel-input');
-const reviewUserComment = document.querySelector('.reviw-form-comment');
+const reviewUserComment = document.querySelector('.review-form-comment');
 
 const nameErrorText = document.querySelector('.name-error-text');
 const emailErrorText = document.querySelector('.email-error-text');
