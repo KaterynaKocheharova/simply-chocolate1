@@ -44,3 +44,5 @@ function onReviewSubmit(event) {
     event.currentTarget.reset();
   }
 }
+
+// fix console errors
