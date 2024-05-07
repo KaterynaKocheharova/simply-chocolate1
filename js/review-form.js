@@ -23,13 +23,14 @@ function openModal() {
 
 function closeModal() {
   toggleModal(reviewFormBackdrop);
-  allowScroll();
   reviewFormCloseBtn.removeEventListener('click', closeModal);
   document.removeEventListener('keydown', closeModalOnEscHandler);
+  allowScroll();
 }
 
 function closeModalOnEscHandler(event) {
   closeModalOnEsc(event, reviewFormBackdrop);
+  allowScroll();
 }
 
 // ================================== FORM HANDLER
@@ -44,5 +45,3 @@ function onReviewSubmit(event) {
     event.currentTarget.reset();
   }
 }
-
-// fix console errors
