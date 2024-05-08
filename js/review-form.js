@@ -3,6 +3,7 @@
 import { forbidScroll, allowScroll } from './forbid-scroll.js';
 import { validateReviewForm } from './form-validation-helpers.js';
 import { showMessage } from './izitoast.js';
+import { toggleModal, closeModalOnEsc } from './modal-helpers.js';
 
 // ===================================== VARIABLES
 const reviewFormBackdrop = document.querySelector('.review-form-backdrop');
@@ -10,7 +11,6 @@ const leaveReviewBtn = document.querySelector('.review-btn');
 const reviewFormCloseBtn = document.querySelector('.modal-close-btn');
 
 // =================================== OPENING AND CLOSING MODAL
-import { toggleModal, closeModalOnEsc } from './modal-helpers.js';
 
 leaveReviewBtn.addEventListener('click', openModal);
 
