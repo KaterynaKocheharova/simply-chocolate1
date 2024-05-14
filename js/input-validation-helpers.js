@@ -10,11 +10,13 @@ const reviewUserName = document.querySelector('.review-form-user-name-input');
 const reviewUserEmail = document.querySelector('.review-form-user-email-input');
 const reviewUserTel = document.querySelector('.review-form-user-tel-input');
 const reviewUserComment = document.querySelector('.review-form-comment');
+const footerEmail = document.querySelector('.footer-email-input');
 
 const nameErrorText = document.querySelector('.name-error-text');
 const emailErrorText = document.querySelector('.email-error-text');
 const telErrorText = document.querySelector('.tel-error-text');
 const commentErrorText = document.querySelector('.comment-error-text');
+const footerEmailErrorText = document.querySelector('.footer-error-text');
 
 function showInputMessage(isValid, errorElement) {
   if (isValid) {
@@ -40,5 +42,12 @@ reviewUserComment.addEventListener('change', event => {
   showInputMessage(
     validateComment(event.currentTarget.value),
     commentErrorText
+  );
+});
+
+footerEmail.addEventListener('change', event => {
+  showInputMessage(
+    validateEmail(event.currentTarget.value),
+    footerEmailErrorText
   );
 });
