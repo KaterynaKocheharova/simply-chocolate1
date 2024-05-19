@@ -56,7 +56,6 @@ function initializeSwipers() {
   initializeSwiper('topSellers', {
     effect: 'coverflow',
     grabCursor: true,
-    centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 50,
