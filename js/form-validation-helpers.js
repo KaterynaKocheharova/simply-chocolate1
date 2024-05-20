@@ -1,5 +1,9 @@
 import { showMessage } from './izitoast.js';
 
+// UNIVERSAL FORM VALIDATION FUNCTION
+
+export function submitAndValidate(event) {}
+
 // =========================== FORM VALIDATION FUNCTION
 export function validateReviewForm(formData) {
   const nameValue = formData.get('name').trim();
