@@ -11,7 +11,6 @@ const leaveReviewBtn = document.querySelector('.review-btn');
 const reviewFormCloseBtn = document.querySelector('.modal-close-btn');
 
 // =================================== OPENING AND CLOSING MODAL
-
 leaveReviewBtn.addEventListener('click', openModal);
 
 function openModal() {

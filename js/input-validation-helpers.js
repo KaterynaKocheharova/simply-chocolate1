@@ -18,14 +18,6 @@ const telErrorText = document.querySelector('.tel-error-text');
 const commentErrorText = document.querySelector('.comment-error-text');
 const footerEmailErrorText = document.querySelector('.footer-error-text');
 
-function showInputMessage(isValid, errorElement) {
-  if (isValid) {
-    errorElement.classList.add('hidden');
-  } else {
-    errorElement.classList.remove('hidden');
-  }
-}
-
 reviewUserName.addEventListener('change', event => {
   showInputMessage(validateName(event.currentTarget.value), nameErrorText);
 });
@@ -51,3 +43,11 @@ footerEmail.addEventListener('change', event => {
     footerEmailErrorText
   );
 });
+
+function showInputMessage(isValid, errorElement) {
+  if (isValid) {
+    errorElement.classList.add('hidden');
+  } else {
+    errorElement.classList.remove('hidden');
+  }
+}
